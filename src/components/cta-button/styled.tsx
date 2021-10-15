@@ -1,0 +1,32 @@
+import styled, { css } from 'styled-components'
+
+export const Button = styled.input.attrs(props => ({
+  type: 'button'
+}))`
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  font-family: ${({ theme }) => theme.font.families.paragraph};
+  font-weight: bold;
+  color: ${({ color }) => color};
+
+  ${ props => props.id === 'primary' &&
+    css`
+    color: white;
+    background: ${({ theme }) => theme.colors.accent};
+ `};
+
+  ${ props => props.id !== 'primary' &&
+    css`
+    color: white;
+    background: ${({ theme }) => theme.colors.lightGray};
+ `};
+
+
+  background: ${({ id }) => id};
+
+  border-radius: 2px;
+  padding: 10px;
+  border: none;
+
+  cursor: pointer;
+
+`
