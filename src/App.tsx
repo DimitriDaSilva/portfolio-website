@@ -14,7 +14,6 @@ import Footer from './components/footer/Footer';
 const App:React.FC = () => {
   return (
     <ThemeProvider theme={themes.light}>
-      <>
         <GlobalStyle />
         <Router>
           <Navbar />
@@ -34,7 +33,6 @@ const App:React.FC = () => {
           </Switch>
           <Footer />
         </Router>
-      </>
     </ThemeProvider>
   );
 }
