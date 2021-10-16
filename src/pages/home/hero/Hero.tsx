@@ -1,4 +1,5 @@
-import { Wrapper,
+import { OutterWrapper,
+	InnerWrapper,
 	LeftSide,
 	TextSection,
 	Header,
@@ -7,25 +8,26 @@ import { Wrapper,
 	Illustration,
 	FloatingArrow } from './styled'
 import CtaButton from '../../../components/cta-button/CtaButton'
+import illustration from "./../../../assets/images/undraw-illustration.svg"
 
 const Hero: React.FC = () => {
 	return (
-		<>
-			<Wrapper>
+		<OutterWrapper>
+			<InnerWrapper>
 				<LeftSide>
 					<TextSection>
 						<Header>Let's build something <RedUnderline>great</RedUnderline> together!</Header>
-						<Name>Dimitri Da Silva, web developer from Paris</Name>
+						<Name>Dimitri Da Silva, full stack web developer from Paris</Name>
 					</TextSection>
 					<CtaButton
-						id="primary"
+						text="Let's chat!"
 						onClick={() => { console.log("Go to contact") }}
-						text="Let's chat!" />
+						id="primary" />
 				</LeftSide>
-				<Illustration></Illustration>
-			</Wrapper>
+				<Illustration src={illustration} alt="developer-illustration" />
+			</InnerWrapper>
 			<FloatingArrow />
-		</>
+		</OutterWrapper>
 	);
 }
 

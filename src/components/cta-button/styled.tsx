@@ -20,7 +20,6 @@ export const Button = styled.input.attrs(props => ({
     background: ${({ theme }) => theme.colors.lightGray};
  `};
 
-
   background: ${({ id }) => id};
 
   border-radius: 2px;
@@ -28,5 +27,9 @@ export const Button = styled.input.attrs(props => ({
   border: none;
 
   cursor: pointer;
+  transition: all ${({ theme }) => theme.transitionSpeed};
 
+  &:hover {
+    filter: brightness(130%);
+  }
 `

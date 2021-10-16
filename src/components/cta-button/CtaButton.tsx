@@ -1,14 +1,14 @@
 import { Button } from './styled'
 
 interface IProps {
-  id: string;
   text: string;
   onClick: () => void;
+  id: string;
 }
 
-const CtaButton: React.FC<IProps> = ({id, text, onClick}) => {
+const CtaButton: React.FC<IProps> = ({text, onClick, id}) => {
   return (
-    <Button value={text} id={id} onClick={onClick} />
+    <Button value={text} onClick={onClick} id={id}/>
   );
 };
 

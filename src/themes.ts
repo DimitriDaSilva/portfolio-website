@@ -15,6 +15,7 @@ const font = {
 const breakpoints = {
       mobile: 360,
       tablet: 760,
+      tabletLarge: 1024,
       desktop: 1440,
       desktopLarge: 1920,
 };

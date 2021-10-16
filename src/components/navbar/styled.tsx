@@ -47,7 +47,7 @@ export const NavLink = styled(Link)`
   font-size: 20px;
   padding: 0px 10px;
   text-decoration: none;
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
 
   color: ${({ theme }) => theme.colors.font};
   transition: color ${({ theme }) => theme.transitionSpeed};
