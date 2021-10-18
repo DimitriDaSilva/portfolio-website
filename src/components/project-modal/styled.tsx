@@ -14,7 +14,8 @@ export const Background = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   position: fixed;
@@ -25,7 +26,49 @@ export const Wrapper = styled.div`
 
   background: ${({ theme }) => theme.colors.bg};
 
+  width: 760px;
+
   z-index: 1000;
+`
+
+export const ProjectImages = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 460px;
+
+  background-size: cover;
+`
+
+export const Slider = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 30px;
+
+  background: rgba( 0, 0, 0, 0.7 );
+
+  cursor: pointer;
+`
+
+export const Image = styled.img`
+
+`
+
+export const InnerWrapper = styled.div`
+  height: 300px;
+`
+
+export const TextSection = styled.div`
+
+`
+
+export const Links = styled.div`
+
 `
 
 export const CrossIcon = styled(FaTimes)`

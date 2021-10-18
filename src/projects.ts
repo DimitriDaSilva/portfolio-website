@@ -12,9 +12,12 @@ const projects = [
       'DOM manipulation', 'Events', 'API calls', 'Serverless functions'
     ],
     images: [
-      '../images/projects/to-do-list/image1.png',
-      '../images/projects/to-do-list/image2.png'
+      '/assets/images/projects/to-do-list/image1.png',
+      '/assets/images/projects/to-do-list/image2.png',
+      '/assets/images/projects/to-do-list/image3.png'
     ],
+	websiteLink: 'https://yet-another-to-do-list.netlify.app/',
+	githubLink: 'https://github.com/DimitriDaSilva/yet-another-to-do-list'
   },
   {
     id: 2,
@@ -28,10 +31,9 @@ const projects = [
     skills: [
       'Component-Driven Development', 'Custom domain', 'Web hosting'
     ],
-    images: [
-      '../images/projects/portfolio-website/image1.png',
-      '../images/projects/portfolio-website/image2.png'
-    ],
+    images: [],
+	websiteLink: 'test',
+	githubLink: 'https://github.com/DimitriDaSilva/portfolio-website'
   },
   {
     id: 1,
@@ -41,14 +43,15 @@ const projects = [
     stack: [
       'C'
     ],
-    description: 'A custom shell built with a partner',
+    description: 'A custom shell built with a partner. Some of the features that have been been implemented:\n- Command history through up and down arrow\n- Absolute and relative path for executables\n- Built-in functions like exit, env or export\n- Environment variables\n- AND, OR and \';\'',
     skills: [
       'Pair programming', 'Git flow', 'Shell scripting', 'Terminal manipulation with the Termcap library', 'Double linked-lists'
     ],
     images: [
-      '../images/projects/minishell/image1.png',
-      '../images/projects/minishell/image2.png'
+      '/assets/images/projects/minishell/image1.png',
     ],
+	websiteLink: '',
+	githubLink: 'https://github.com/DimitriDaSilva/42_minishell'
   },
 ];
 

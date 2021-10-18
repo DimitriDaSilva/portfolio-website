@@ -4,7 +4,7 @@ import { Wrapper, Icon, InnerWrapper, Text, Title, Stack } from './styled'
 import CtaButton from '../cta-button/CtaButton'
 import Modal from '../../components/project-modal/ProjectModal'
 
-interface ProjectData {
+export interface ProjectData {
   id: number
   title: string
   icon: string
@@ -32,7 +32,7 @@ const SingleProject: React.FC<ProjectData> = (data) => {
             text="View more"
             onClick={openModal}
             id="primary" />
-        {isModalOpen && <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
+        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} data={data} />
       </InnerWrapper>
     </Wrapper>
   );
