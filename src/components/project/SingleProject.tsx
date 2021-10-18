@@ -1,7 +1,10 @@
+import { useState } from 'react';
+
 import { Wrapper, Icon, InnerWrapper, Text, Title, Stack } from './styled'
 import CtaButton from '../cta-button/CtaButton'
+import Modal from '../../components/project-modal/ProjectModal'
 
-interface ProjectInfo {
+interface ProjectData {
   id: number
   title: string
   icon: string
@@ -10,22 +13,26 @@ interface ProjectInfo {
   images: string[]
 }
 
-const SingleProject: React.FC<ProjectInfo> = (projectInfo) => {
-  const info: ProjectInfo = projectInfo;
-  console.log(info.icon);
+const SingleProject: React.FC<ProjectData> = (data) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(prev => !prev);
+  }
 
   return (
-    <Wrapper color={info.color}>
-      <Icon src={info.icon} alt="icon" />
+    <Wrapper color={data.color}>
+      <Icon src={data.icon} alt="icon" />
       <InnerWrapper>
         <Text>
-          <Title>{info.title}</Title>
-          <Stack>{info.stack.slice(0, 3).join(' / ')}</Stack>
+          <Title>{data.title}</Title>
+          <Stack>{data.stack.slice(0, 3).join(' / ')}</Stack>
         </Text>
         <CtaButton
             text="View more"
-            onClick={() => { console.log("Go to contact") }}
+            onClick={openModal}
             id="primary" />
+        {isModalOpen && <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
       </InnerWrapper>
     </Wrapper>
   );

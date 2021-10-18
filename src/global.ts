@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     overflow-x: hidden;
 
+    margin: 0;
+    padding: 0;
+
     outline: 1px solid red;
   }
 `;
