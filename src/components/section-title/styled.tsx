@@ -4,7 +4,7 @@ export const Header = styled.h2`
 	align-self: flex-start;
 
 	font-size: ${({ theme }) => theme.font.sizes.heading_m};
-    color: ${({ theme }) => theme.colors.font};
+	color: ${({ theme }) => theme.colors.font};
 
 	position: relative;
 	z-index: 0;
@@ -21,5 +21,5 @@ export const Header = styled.h2`
 		z-index: -1;
 	}
 
-    margin: 30px 0px;
+	margin: 30px 0px;
 `

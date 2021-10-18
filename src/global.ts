@@ -10,13 +10,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     background-color: ${({ theme }) => theme.colors.bg};
     color: ${({ theme }) => theme.colors.font};
-    font-family: 'Sen', sans-serif; 
+    font-family: 'Sen', sans-serif;
 
     margin: 0;
     padding: 0;
 
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     margin: 0;
     padding: 0;
 
-	outline: 1px solid red;
+    outline: 1px solid red;
   }
 `;
 

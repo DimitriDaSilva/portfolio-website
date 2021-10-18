@@ -6,12 +6,17 @@ import { Background,
   Wrapper,
   ProjectImages,
   Slider,
-  Image,
   InnerWrapper,
   TextSection,
+  Title,
+  Description,
+  Stack,
+  Skills,
+  LinkSection,
   Links,
   CrossIcon } from './styled'
 import { ProjectData } from '../project/SingleProject'
+import CtaButton from '../cta-button/CtaButton';
 
 interface IProps {
   isModalOpen: boolean;
@@ -50,7 +55,7 @@ const ProjectModal: React.FC<IProps> = ({ isModalOpen, setIsModalOpen, data }) =
   return portalDiv ? ReactDOM.createPortal(
     <Background ref={modalRef} onClick={(e) => {if (modalRef.current === e.target) {setIsModalOpen(false)}}}>
       <Wrapper>
-        {data.images.length !== 0 && 
+        {data.images.length !== 0 &&
           <ProjectImages style={{backgroundImage: `url(${data.images[currImg]})`}}>
             {data.images.length > 1 &&
             <>
@@ -60,9 +65,30 @@ const ProjectModal: React.FC<IProps> = ({ isModalOpen, setIsModalOpen, data }) =
           </ProjectImages>}
         <InnerWrapper>
           <TextSection>
+            <Title>{data.title}</Title>
+            <Description>{data.description}</Description>
+            <Stack><strong>Stack:</strong> {data.stack.join(' / ')}</Stack>
+            <Skills><strong>What I learned:</strong> {data.skills.join(' / ')}</Skills>
           </TextSection>
-          <Links></Links>
-          <CrossIcon onClick={() => setIsModalOpen(false)} />
+          <LinkSection>
+            <CrossIcon onClick={() => setIsModalOpen(false)} />
+            <Links>
+              {data.websiteLink !== '' &&
+                <a href={data.websiteLink} target='_blank' rel='noreferrer'>
+                  <CtaButton
+                      text="View website"
+                      onClick={() => {}}
+                      id="secondary" />
+                </a>}
+              {data.githubLink !== '' &&
+                <a href={data.githubLink} target='_blank' rel='noreferrer'>
+                  <CtaButton
+                      text="View GitHub"
+                      onClick={() => {}}
+                      id="secondary" />
+                </a>}
+            </Links>
+          </LinkSection>
         </InnerWrapper>
       </Wrapper>
     </Background>,

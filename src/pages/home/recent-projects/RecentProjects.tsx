@@ -8,7 +8,7 @@ import SectionTitle from '../../../components/section-title/SectionTitle';
 
 const RecentProjects: React.FC = () => {
   return (
-	<Wrapper>
+    <Wrapper>
       <SectionTitle>Recent projects</SectionTitle>
       <Projects>
         {projects.map((project) => {
@@ -17,11 +17,11 @@ const RecentProjects: React.FC = () => {
       </Projects>
       <Link to='/projects'>
         <CtaButton
-            text="More projects"
-            onClick={() => { console.log("Go to contact") }}
-            id="secondary" />
+            text='See more projects'
+            onClick={() => {}}
+            id='secondary' />
       </Link>
-	</Wrapper>
+    </Wrapper>
   );
 };
 

@@ -7,7 +7,7 @@ const projects = [
     stack: [
       'HTML', 'CSS', 'JavaScript', 'Webpack', 'Netlify'
     ],
-    description: 'A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\n\nIt supports drag-and-drop both with mouse and touch and it\'s fully customizable:\n- Background image using Unslapsh\'s API\n- Dark mode\n- Editable names and colors of the categories)',
+    description: 'A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it\'s fully customizable:\n- Background image using Unslapsh\'s API\n- Dark mode\n- Editable names and colors of the categories)',
     skills: [
       'DOM manipulation', 'Events', 'API calls', 'Serverless functions'
     ],
@@ -32,8 +32,8 @@ const projects = [
       'Component-Driven Development', 'Custom domain', 'Web hosting'
     ],
     images: [],
-	websiteLink: 'test',
-	githubLink: 'https://github.com/DimitriDaSilva/portfolio-website'
+	websiteLink: '',
+    githubLink: 'https://github.com/DimitriDaSilva/portfolio-website'
   },
   {
     id: 1,
@@ -50,8 +50,8 @@ const projects = [
     images: [
       '/assets/images/projects/minishell/image1.png',
     ],
-	websiteLink: '',
-	githubLink: 'https://github.com/DimitriDaSilva/42_minishell'
+    websiteLink: '',
+    githubLink: 'https://github.com/DimitriDaSilva/42_minishell'
   },
 ];
 

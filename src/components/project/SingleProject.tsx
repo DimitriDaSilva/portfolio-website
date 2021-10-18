@@ -10,7 +10,11 @@ export interface ProjectData {
   icon: string
   color: string
   stack: string[]
+  description: string
+  skills: string[]
   images: string[]
+  websiteLink: string
+  githubLink: string
 }
 
 const SingleProject: React.FC<ProjectData> = (data) => {
