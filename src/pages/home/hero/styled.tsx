@@ -19,7 +19,9 @@ export const InnerWrapper = styled.div`
 
 	width: 100%;
 
-	justify-content: center;
+	${down('tabletLarge')} {
+		justify-content: center;
+	}
 
 	${up('tabletLarge')} {
 		justify-content: space-between;
@@ -59,31 +61,34 @@ export const TextSection = styled.div`
 export const Header = styled.h1`
 	margin: 0px;
 
+	font-weight: bold;
+	line-height: 1.2;
+
+	z-index: 2;
+
 	${down('mobile')} {
-		font-size: ${({ theme }) => theme.font.sizes.heading_s};
+		font-size: ${({ theme }) => theme.font.sizes.heading_l};
 	}
 
 	${up('mobile')} {
 		font-size: ${({ theme }) => theme.font.sizes.heading_xl};
 	}
-	font-weight: bold;
-	line-height: 1.2;
 `
 
 export const RedUnderline = styled.span`
 	position: relative;
-	z-index: 0;
+	z-index: 1;
 
 	&::after {
 		display: block;
 		content: '';
 		width: 60%;
-		height: 10px;
 		background: ${({ theme }) => theme.colors.accent};
 		position: absolute;
-		bottom: 10px;
+		z-index: -2;
 		left: -10px;
-		z-index: -1;
+		height: 10px;
+		bottom: 10px;
 	}
 `
 

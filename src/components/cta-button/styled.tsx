@@ -20,8 +20,6 @@ export const Button = styled.input.attrs(props => ({
     background: ${({ theme }) => theme.colors.lightGray};
  `};
 
-  background: ${({ id }) => id};
-
   border-radius: 2px;
   padding: 10px;
   border: none;

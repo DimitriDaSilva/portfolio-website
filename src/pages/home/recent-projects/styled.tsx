@@ -1,3 +1,4 @@
+import { up, down } from 'styled-breakpoints'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -7,36 +8,32 @@ export const Wrapper = styled.div`
 	align-items: center;
 
 	width: 100%;
-`
 
-export const Header = styled.h2`
-	align-self: flex-start;
-
-	font-size: ${({ theme }) => theme.font.sizes.heading_m}
 `
 
 export const Projects = styled.div`
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 
 	width: 90%;
-`
 
-export const RedUnderline = styled.span`
-	position: relative;
-	z-index: 0;
+	gap: 5vw 5vw;
 
-	&::after {
-		display: block;
-		content: '';
-		width: 60%;
-		height: 6px;
-		background: ${({ theme }) => theme.colors.accent};
-		position: absolute;
-		bottom: 4px;
-		left: -10px;
-		z-index: -1;
+	${down('tablet')} {
+		flex-direction: column;
+		flex-wrap: no-wrap;
 	}
-`
+	
+	${up('tablet')} {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	${up('desktop')} {
+		flex-direction: row;
+		flex-wrap: no-wrap;
+	}
 
+	padding-bottom: 30px;
+`

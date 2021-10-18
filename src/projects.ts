@@ -2,8 +2,8 @@ const projects = [
   {
     id: 1,
     title: 'A feature-packed to-do list',
-    icon: '../images/projects/to-do-list/logo.svg',
-    color: '#F1A74D',
+    icon: '/assets/images/projects/to-do-list/logo.png',
+    color: '#FFC176',
     stack: [
       'HTML', 'CSS', 'JavaScript', 'Webpack', 'Netlify'
     ],
@@ -19,7 +19,7 @@ const projects = [
   {
     id: 2,
     title: 'My portfolio website',
-    icon: '../images/projects/portfolio-website/logo.svg',
+    icon: '/assets/images/projects/portfolio-website/logo.png',
     color: '#25EF94',
     stack: [
       'React', 'TypeScript', 'styled-components', 'HTML', 'CSS'
@@ -36,14 +36,14 @@ const projects = [
   {
     id: 1,
     title: 'A team-built shell',
-    icon: '../images/projects/minishell/logo.svg',
+    icon: '/assets/images/projects/minishell/logo.png',
     color: '#25C3EF',
     stack: [
       'C'
     ],
     description: 'A custom shell built with a partner',
     skills: [
-      'Pair programming', 'Git', 'Shell scripting', 'Terminal manipulation with the Termcap library', 'Double linked-lists'
+      'Pair programming', 'Git flow', 'Shell scripting', 'Terminal manipulation with the Termcap library', 'Double linked-lists'
     ],
     images: [
       '../images/projects/minishell/image1.png',

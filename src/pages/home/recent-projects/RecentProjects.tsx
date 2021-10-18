@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 
-import { Wrapper, Header, Projects, RedUnderline  } from './styled';
+import { Wrapper, Projects } from './styled';
 import CtaButton from '../../../components/cta-button/CtaButton';
 import SingleProject from '../../../components/project/SingleProject';
-import projects from './../../../assets/content/projects';
+import projects from '../../../projects';
+import SectionTitle from '../../../components/section-title/SectionTitle';
 
 const RecentProjects: React.FC = () => {
   return (
 	<Wrapper>
-      <Header><RedUnderline>Recent</RedUnderline> projects</Header>
+      <SectionTitle>Recent projects</SectionTitle>
       <Projects>
         {projects.map((project) => {
           return <SingleProject key={project.id} {...project} />;
