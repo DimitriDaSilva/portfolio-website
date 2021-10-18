@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
 	align-items: center;
 
 	width: 100%;
-
 `
 
 export const Projects = styled.div`

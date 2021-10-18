@@ -11,6 +11,8 @@ export const OutterWrapper = styled.div`
 	height: 700px;
 	margin-bottom: 20px;
 	padding: 150px 0px 5px 0px;
+
+	width: 100%;
 `
 
 export const InnerWrapper = styled.div`
@@ -102,9 +104,6 @@ export const Name = styled.p`
 
 export const Illustration = styled.img`
 	height: 400px;
-
-	position: absolute;
-	right: 10%;
 
 	${down('tabletLarge')} {
 		display: none;

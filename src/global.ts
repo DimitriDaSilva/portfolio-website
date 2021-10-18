@@ -13,13 +13,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'Sen', sans-serif; 
 
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    padding: 0;
 
     display: flex; 
     flex-direction: column; 
     align-items: center;
-
   }
 
   *,
@@ -28,6 +26,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+
+    overflow-x: hidden;
+
+    outline: 1px solid red;
   }
 `;
 

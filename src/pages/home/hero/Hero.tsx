@@ -8,7 +8,6 @@ import { OutterWrapper,
 	Illustration,
 	FloatingArrow } from './styled'
 import CtaButton from '../../../components/cta-button/CtaButton'
-import illustration from "./../../../assets/images/undraw-illustration.svg"
 
 const Hero: React.FC = () => {
 	return (
@@ -21,10 +20,10 @@ const Hero: React.FC = () => {
 					</TextSection>
 					<CtaButton
 						text="Let's chat!"
-						onClick={() => { console.log("Go to contact") }}
-						id="primary" />
+						onClick={() => { console.log('Go to contact') }}
+						id='primary' />
 				</LeftSide>
-				<Illustration src={illustration} alt="developer-illustration" />
+				<Illustration src={process.env.PUBLIC_URL + '/assets/images/undraw-illustration.svg'} alt='developer-illustration' />
 			</InnerWrapper>
 			<FloatingArrow />
 		</OutterWrapper>
