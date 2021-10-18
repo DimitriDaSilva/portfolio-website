@@ -60,7 +60,7 @@ export const Header = styled.h1`
 	margin: 0px;
 
 	${down('mobile')} {
-		font-size: ${({ theme }) => theme.font.sizes.heading_l};
+		font-size: ${({ theme }) => theme.font.sizes.heading_s};
 	}
 
 	${up('mobile')} {
@@ -99,9 +99,11 @@ export const Illustration = styled.img`
 	height: 400px;
 
 	position: absolute;
-	right: 50px;
+	right: 10%;
 
-	display: none;
+	${down('tabletLarge')} {
+		display: none;
+	}
 
 	${up('tabletLarge')} {
 		display: block;

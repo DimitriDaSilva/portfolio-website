@@ -6,18 +6,19 @@ const font = {
   sizes: {
     heading_xl: '60px',
     heading_l: '50px',
-    heading_m: '16px',
+    heading_m: '35px',
+    heading_s: '16px',
     paragraph_m: '16px',
     paragraph_s: '12px',
   },
 };
 
 const breakpoints = {
-      mobile: 360,
-      tablet: 760,
-      tabletLarge: 1024,
-      desktop: 1440,
-      desktopLarge: 1920,
+  mobile: 360,
+  tablet: 760,
+  tabletLarge: 1024,
+  desktop: 1440,
+  desktopLarge: 1920,
 };
 
 export const themes = {
