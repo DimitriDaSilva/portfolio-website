@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Button = styled.input.attrs(props => ({
-  type: 'button'
-}))`
+export const Button = styled.input`
   font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   font-family: ${({ theme }) => theme.font.families.paragraph};
   font-weight: bold;

@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     margin: 0;
     padding: 0;
+    width: 100vw;
 
     display: flex;
     flex-direction: column;
@@ -32,7 +33,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     margin: 0;
     padding: 0;
 
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
   }
 `;
 

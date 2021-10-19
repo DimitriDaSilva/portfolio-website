@@ -35,7 +35,8 @@ const SingleProject: React.FC<ProjectData> = (data) => {
         <CtaButton
             text="View more"
             onClick={openModal}
-            id="primary" />
+            id="primary" 
+            type='button' />
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} data={data} />
       </InnerWrapper>
     </Wrapper>

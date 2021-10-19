@@ -19,7 +19,8 @@ const RecentProjects: React.FC = () => {
         <CtaButton
             text='See more projects'
             onClick={() => {}}
-            id='secondary' />
+            id='secondary'
+            type='button' />
       </Link>
     </Wrapper>
   );

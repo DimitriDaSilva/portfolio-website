@@ -21,7 +21,8 @@ const Hero: React.FC = () => {
 					<CtaButton
 						text="Let's chat!"
 						onClick={() => { console.log('Go to contact') }}
-						id='primary' />
+						id='primary'
+						type='button' />
 				</LeftSide>
 				<Illustration src={process.env.PUBLIC_URL + '/assets/images/undraw-illustration.svg'} alt='developer-illustration' />
 			</InnerWrapper>
