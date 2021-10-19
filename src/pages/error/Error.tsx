@@ -1,10 +1,10 @@
-import { Container } from './styled'
+import { Wrapper } from './styled'
 
 const Error: React.FunctionComponent = () => {
   return (
-	<>
+	<Wrapper>
 	  Error page
-	</>
+	</Wrapper>
   );
 }
 
