@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaRegEnvelope } from 'react-icons/fa';
+import ReactTooltip from 'react-tooltip';
 
 export const Wrapper = styled.footer`
   display: flex;
@@ -20,13 +21,13 @@ export const SocialIcons = styled.ul`
 
   padding: 0;
   margin: 0;
-  width: 224px;
-  height: 20px;
+  width: 270px;
+  height: 24px;
 `
 
 const formatSocialIcon = (icon: typeof FaLinkedin) => {
   return styled(icon)`
-    background-color: transparent;
+    background: transparent;
     font-size: 20px;
 
     color: ${({ theme }) => theme.colors.bg};
@@ -41,6 +42,18 @@ const formatSocialIcon = (icon: typeof FaLinkedin) => {
 export const TwitterIcon = formatSocialIcon(FaTwitter);
 export const GithubIcon = formatSocialIcon(FaGithub);
 export const LinkedinIcon = formatSocialIcon(FaLinkedin);
+export const EmailIcon = formatSocialIcon(FaRegEnvelope);
+
+export const EmailButton = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`
+
+export const Tooltip = styled(ReactTooltip).attrs(({ theme }) => ({
+  backgroundColor: `${theme.colors.lightGray}`
+}))`
+`
 
 export const Copyright = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
