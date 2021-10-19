@@ -70,7 +70,7 @@ export const Label = styled.label`
 	overflow: hidden;
 
 	&::after {
-		content: "";
+		content: '';
 
 		position: absolute;
 		left: 0px;

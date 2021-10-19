@@ -8,7 +8,6 @@ const Navbar: React.FC = () => {
         <Img src={process.env.PUBLIC_URL + '/assets/images/dds-logo-black.png'} alt='logo' />
       </NavLogo>
       <NavMenu>
-        <NavLink to='/projects'>Projects</NavLink>
         <NavLink to='/about'>About</NavLink>
       </NavMenu>
     </Nav>

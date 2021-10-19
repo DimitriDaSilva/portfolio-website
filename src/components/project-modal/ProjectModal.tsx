@@ -76,17 +76,17 @@ const ProjectModal: React.FC<IProps> = ({ isModalOpen, setIsModalOpen, data }) =
               {data.websiteLink !== '' &&
                 <a href={data.websiteLink} target='_blank' rel='noreferrer'>
                   <CtaButton
-                      text="View website"
+                      text='View website'
                       onClick={() => {}}
-                      id="secondary"
+                      id='secondary'
                       type='button' />
                 </a>}
               {data.githubLink !== '' &&
                 <a href={data.githubLink} target='_blank' rel='noreferrer'>
                   <CtaButton
-                      text="View GitHub"
+                      text='View GitHub'
                       onClick={() => {}}
-                      id="secondary"
+                      id='secondary'
                       type='button' />
                 </a>}
             </Links>

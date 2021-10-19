@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { up } from 'styled-breakpoints'
+import { up, down } from 'styled-breakpoints'
 
 export const Main = styled.main`
   display: flex;
@@ -7,8 +7,11 @@ export const Main = styled.main`
   align-items: center;
   flex: 1 0 auto;
 
-  padding: 0px 10px;
   width: 100%;
+
+  ${down('mobile')} {
+    padding: 0px 10px;
+  }
 
   ${up('mobile')} {
     padding: 0px 20px;
