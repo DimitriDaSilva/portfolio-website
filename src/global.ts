@@ -2,8 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 import { ThemeType } from './themes'
 
-//min-height: 100vh;
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body, #root {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

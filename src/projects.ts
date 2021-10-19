@@ -36,7 +36,7 @@ const projects = [
     githubLink: 'https://github.com/DimitriDaSilva/portfolio-website'
   },
   {
-    id: 1,
+    id: 3,
     title: 'A team-built shell',
     icon: '/assets/images/projects/minishell/logo.png',
     color: '#25C3EF',

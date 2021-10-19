@@ -22,7 +22,7 @@ export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 
 	row-gap: 20px;
 

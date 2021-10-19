@@ -24,7 +24,7 @@ const Contact: React.FunctionComponent = () => {
 	};
 
 	return (
-		<Wrapper>
+		<Wrapper id={'contact-form'}>
 			<SectionTitle>Let's chat</SectionTitle>
 			<Text>Reach out if you want help bringing your ideas to life or if just want to connect</Text>
 			<Form ref={formRef} onSubmit={sendEmail}>
