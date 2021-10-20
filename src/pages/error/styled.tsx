@@ -34,23 +34,25 @@ export const Wrapper = styled.div`
 `
 
 export const Illustration = styled.img`
-	${down('mobile')} {
-		width: 80%;
-	}
+	padding-bottom: 40px;
 
-	${up('mobile')} {
+	${down('mobile')} {
 		width: 70%;
 	}
 
-	${up('tablet')} {
+	${up('mobile')} {
 		width: 60%;
 	}
 
-	${up('desktop')} {
+	${up('tablet')} {
 		width: 50%;
 	}
 
+	${up('desktop')} {
+		width: 40%;
+	}
+
 	${up('desktopLarge')} {
-		width: 887px;
+		width: 710px;
 	}
 `
