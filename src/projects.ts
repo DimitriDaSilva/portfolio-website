@@ -27,7 +27,7 @@ const projects = [
     stack: [
       'React', 'TypeScript', 'styled-components', 'HTML', 'CSS'
     ],
-    description: 'My very own portfolio website. Like every developer, I will be continuously tweaking it and adding more project with time. To save myself some time, I used Figma to desgin it.',
+    description: 'My very own portfolio website. Like every developer, I will be continuously tweaking it and adding more project with time. To save myself some time, I used Figma to design it.',
     skills: [
       'Component-Driven Development', 'Custom domain', 'Web hosting'
     ],
@@ -43,7 +43,7 @@ const projects = [
     stack: [
       'C'
     ],
-    description: 'A custom shell built with a partner. Some of the features that have been been implemented:\n- Command history through up and down arrow\n- Absolute and relative path for executables\n- Built-in functions like exit, env or export\n- Environment variables\n- AND, OR and \';\'',
+    description: 'A custom shell built with a partner. Some of the features that have been implemented:\n- Command history through up and down arrows\n- Absolute and relative path for executables\n- Built-in functions like exit, env or export\n- Environment variables\n- AND, OR and \';\'',
     skills: [
       'Pair programming', 'Git flow', 'Shell scripting', 'Terminal manipulation with the Termcap library', 'Double linked-lists'
     ],

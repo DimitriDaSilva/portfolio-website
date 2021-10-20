@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         <li><EmailButton data-tip='' onClick={copyEmail} onMouseOut={onMouseOutHandler} ><EmailIcon /></EmailButton></li>
       </SocialIcons>
       <Copyright>© {new Date().getFullYear()} Dimitri Da Silva</Copyright>
-      <Tooltip getContent={() => {return tooltipMessage}}/>
+      <Tooltip multiline={false} getContent={() => {return tooltipMessage}}/>
     </Wrapper>
   );
 };
