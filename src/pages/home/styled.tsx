@@ -8,6 +8,7 @@ export const Main = styled.main`
   flex: 1 0 auto;
 
   width: 100%;
+  min-height: calc(100vh - ${({ theme }) => theme.footerHeight} - ${({ theme }) => theme.navbarHeight});
 
   ${down('mobile')} {
     padding: 0px 10px;

@@ -6,7 +6,6 @@ import GlobalStyle from './global'
 import { themes } from './themes'
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
-import About from './pages/about/About';
 import Error from './pages/error/Error';
 import Footer from './components/footer/Footer';
 
@@ -20,10 +19,7 @@ const App:React.FC = () => {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route path='/about'>
-              <About />
-            </Route>
-            <Route>
+            <Route path='*'>
               <Error />
             </Route>
           </Switch>

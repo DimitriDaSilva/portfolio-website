@@ -50,7 +50,6 @@ const Contact: React.FunctionComponent = () => {
 					id='primary'
 					type='submit' 
 					/>
-
 			</Form>
 		</Wrapper>
 	);

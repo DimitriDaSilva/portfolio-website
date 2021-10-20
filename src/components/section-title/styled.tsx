@@ -1,9 +1,17 @@
 import styled from 'styled-components'
+import { up, down } from 'styled-breakpoints'
 
 export const Header = styled.h2`
 	align-self: flex-start;
 
-	font-size: ${({ theme }) => theme.font.sizes.heading_m};
+	${down('mobile')} {
+		font-size: ${({ theme }) => theme.font.sizes.heading_s};
+	}
+
+	${up('mobile')} {
+		font-size: ${({ theme }) => theme.font.sizes.heading_m};
+	}
+
 	color: ${({ theme }) => theme.colors.font};
 
 	position: relative;
@@ -12,13 +20,22 @@ export const Header = styled.h2`
 	&::after {
 		display: block;
 		content: '';
-		width: 70px;
-		height: 6px;
 		background: ${({ theme }) => theme.colors.accent};
 		position: absolute;
-		bottom: 6px;
 		left: -10px;
 		z-index: -1;
+
+		${down('mobile')} {
+			bottom: 3px;
+			height: 3px;
+			width: 50px;
+		}
+
+		${up('mobile')} {
+			bottom: 6px;
+			height: 6px;
+			width: 70px;
+		}
 	}
 
 	margin: 30px 0px;

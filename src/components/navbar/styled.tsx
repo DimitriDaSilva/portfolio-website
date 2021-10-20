@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  min-height: 88px;
+  height: ${({ theme }) => theme.navbarHeight};
 
   padding: 0px 10px;
   width: 100%;
