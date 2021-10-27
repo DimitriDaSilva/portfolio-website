@@ -38,6 +38,8 @@ export const themes = {
     breakpoints,
     font,
     transitionSpeed: '0.1s',
+    footerHeight: '72px',
+    navbarHeight: '88px',
   }
 }
 

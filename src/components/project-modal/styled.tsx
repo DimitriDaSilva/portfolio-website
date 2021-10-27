@@ -105,7 +105,7 @@ export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.font};
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     float: left;
     background: url(${process.env.PUBLIC_URL + '/assets/images/red-triangle.svg'}) no-repeat;

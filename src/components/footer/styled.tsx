@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
   justify-content: space-evenly;
   align-items: center;
 
-  min-height: 72px;
+  height: ${({ theme }) => theme.footerHeight};
   width: 100vw;
 
   background-color: ${({ theme }) => theme.colors.font}

@@ -69,10 +69,14 @@ export const Header = styled.h1`
 	z-index: 2;
 
 	${down('mobile')} {
-		font-size: ${({ theme }) => theme.font.sizes.heading_l};
+		font-size: ${({ theme }) => theme.font.sizes.heading_m};
 	}
 
 	${up('mobile')} {
+		font-size: ${({ theme }) => theme.font.sizes.heading_l};
+	}
+
+	${up('tablet')} {
 		font-size: ${({ theme }) => theme.font.sizes.heading_xl};
 	}
 `
@@ -84,13 +88,21 @@ export const RedUnderline = styled.span`
 	&::after {
 		display: block;
 		content: '';
-		width: 60%;
 		background: ${({ theme }) => theme.colors.accent};
 		position: absolute;
 		z-index: -2;
 		left: -10px;
-		height: 10px;
-		bottom: 10px;
+		width: 60%;
+
+		${down('mobile')} {
+			height: 5px;
+			bottom: 7px;
+		}
+
+		${up('mobile')} {
+			height: 10px;
+			bottom: 10px;
+		}
 	}
 `
 
