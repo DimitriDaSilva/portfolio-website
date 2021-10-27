@@ -1,10 +1,16 @@
-import { Container } from './styled'
+import SingleProject from '../../components/project/SingleProject';
+import { Wrapper, ProjectsWrapper } from './styled'
+import projects from '../../projects';
 
-const Projects: React.FunctionComponent = () => {
+const Projects: React.FC = () => {
   return (
-	<>
-	  Projects component
-	</>
+	  <Wrapper>
+		  <ProjectsWrapper>
+			{projects.map((project) => {
+			  return <SingleProject key={project.id} {...project} />;
+			})}
+		  </ProjectsWrapper>
+	  </Wrapper>
   );
 }
 

@@ -5,7 +5,7 @@ const projects = [
     icon: '/assets/images/projects/to-do-list/logo.png',
     color: '#FFC176',
     stack: [
-      'HTML', 'CSS', 'JavaScript', 'Webpack', 'Netlify'
+      'HTML', 'CSS', 'JavaScript'
     ],
     description: 'A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it\'s fully customizable:\n- Background image using Unslapsh\'s API\n- Dark mode\n- Editable names and colors of the categories)',
     skills: [
@@ -25,7 +25,7 @@ const projects = [
     icon: '/assets/images/projects/portfolio-website/logo.png',
     color: '#25EF94',
     stack: [
-      'React', 'TypeScript', 'styled-components', 'HTML', 'CSS'
+      'React', 'TypeScript', 'HTML', 'CSS'
     ],
     description: 'My very own portfolio website. Like every developer, I will be continuously tweaking it and adding more project with time. To save myself some time, I used Figma to desgin it.',
     skills: [

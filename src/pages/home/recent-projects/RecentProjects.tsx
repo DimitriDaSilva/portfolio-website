@@ -11,7 +11,7 @@ const RecentProjects: React.FC = () => {
     <Wrapper>
       <SectionTitle>Recent projects</SectionTitle>
       <Projects>
-        {projects.map((project) => {
+        {projects.slice(0, 3).map((project) => {
           return <SingleProject key={project.id} {...project} />;
         })}
       </Projects>
