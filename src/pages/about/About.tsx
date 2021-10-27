@@ -1,10 +1,10 @@
-import { Container } from './styled'
+import { Wrapper } from './styled'
 
-const About: React.FunctionComponent = () => {
+const About: React.FC = () => {
   return (
-	<>
-	  About component
-	</>
+	  <Wrapper>
+		  About
+	  </Wrapper>
   );
 }
 
