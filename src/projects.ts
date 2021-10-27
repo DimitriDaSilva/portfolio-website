@@ -34,11 +34,27 @@ const projects = [
     githubLink: 'https://github.com/DimitriDaSilva/portfolio-website'
   },
   {
+    title: 'Byzans, a community for readers',
+    icon: '/assets/projects/byzans/logo.svg',
+    color: '#625ED8',
+    stack: [
+      'React', 'TypeScript', 'Go', 'MongoDB', 'PostgreSQL'
+    ],
+    description: '',
+    skills: [
+    ],
+    images: [
+      '/assets/projects/minishell/image1.png',
+    ],
+    websiteLink: '',
+    githubLink: ''
+  },
+  {
     title: 'A team-built shell',
     icon: '/assets/projects/minishell/logo.png',
     color: '#25C3EF',
     stack: [
-      'C'
+      'C/C++'
     ],
     description: 'A custom shell built with a partner. Some of the features that have been implemented:\n- Command history through up and down arrows\n- Absolute and relative path for executables\n- Built-in functions like exit, env or export\n- Environment variables\n- AND, OR and \';\'',
     skills: [
@@ -51,7 +67,7 @@ const projects = [
     githubLink: 'https://github.com/DimitriDaSilva/42_minishell'
   },
   {
-    title: 'A team-built shell',
+    title: 'A community discord bot',
     icon: '/assets/projects/minishell/logo.png',
     color: '#25C3EF',
     stack: [
