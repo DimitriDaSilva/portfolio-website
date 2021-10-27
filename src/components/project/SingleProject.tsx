@@ -26,16 +26,16 @@ const SingleProject: React.FC<ProjectData> = (data) => {
 
   return (
     <Wrapper color={data.color}>
-      <Icon src={data.icon} alt="icon" />
+      <Icon src={data.icon} alt='icon' />
       <InnerWrapper>
         <Text>
           <Title>{data.title}</Title>
           <Stack>{data.stack.slice(0, 3).join(' / ')}</Stack>
         </Text>
         <CtaButton
-            text="View more"
+            text='View more'
             onClick={openModal}
-            id="primary" 
+            id='primary' 
             type='button' />
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} data={data} />
       </InnerWrapper>

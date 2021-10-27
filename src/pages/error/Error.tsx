@@ -1,10 +1,12 @@
-import { Container } from './styled'
+import { Header } from '../home/hero/styled';
+import { Wrapper, Illustration } from './styled'
 
 const Error: React.FunctionComponent = () => {
   return (
-	<>
-	  Error page
-	</>
+	<Wrapper>
+		<Illustration src={process.env.PUBLIC_URL + '/assets/images/undraw-404-lost.svg'} alt='developer-illustration' />
+		<Header style={{textAlign: 'center'}}> 404 - Page not found</Header>
+	</Wrapper>
   );
 }
 

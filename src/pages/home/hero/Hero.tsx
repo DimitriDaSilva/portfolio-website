@@ -10,6 +10,14 @@ import { OutterWrapper,
 import CtaButton from '../../../components/cta-button/CtaButton'
 
 const Hero: React.FC = () => {
+
+	const scrollToContact = () => {
+		const elemContact = document.getElementById('contact-form');
+
+		elemContact?.scrollIntoView();
+	}
+
+
 	return (
 		<OutterWrapper>
 			<InnerWrapper>
@@ -20,7 +28,7 @@ const Hero: React.FC = () => {
 					</TextSection>
 					<CtaButton
 						text="Let's chat!"
-						onClick={() => { console.log('Go to contact') }}
+						onClick={scrollToContact}
 						id='primary'
 						type='button' />
 				</LeftSide>

@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { up } from 'styled-breakpoints'
-import { NavLink as Link } from "react-router-dom"
+import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  min-height: 88px;
+  height: ${({ theme }) => theme.navbarHeight};
 
   padding: 0px 10px;
   width: 100%;
