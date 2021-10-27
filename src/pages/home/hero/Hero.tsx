@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 						id='primary'
 						type='button' />
 				</LeftSide>
-				<Illustration src={process.env.PUBLIC_URL + '/assets/images/undraw-illustration.svg'} alt='developer-illustration' />
+				<Illustration src={process.env.PUBLIC_URL + '/assets/undraw-illustration-hero.svg'} alt='developer-illustration' />
 			</InnerWrapper>
 			<FloatingArrow />
 		</OutterWrapper>

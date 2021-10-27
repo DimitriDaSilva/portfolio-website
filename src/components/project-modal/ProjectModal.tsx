@@ -15,13 +15,13 @@ import { Background,
   LinkSection,
   Links,
   CrossIcon } from './styled'
-import { ProjectData } from '../project/SingleProject'
+import { IProjectData } from '../project/SingleProject'
 import CtaButton from '../cta-button/CtaButton';
 
 interface IProps {
   isModalOpen: boolean;
   setIsModalOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
-  data: ProjectData;
+  data: IProjectData;
 }
 
 const ProjectModal: React.FC<IProps> = ({ isModalOpen, setIsModalOpen, data }) => {

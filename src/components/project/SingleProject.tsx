@@ -4,8 +4,7 @@ import { Wrapper, Icon, InnerWrapper, Text, Title, Stack } from './styled'
 import CtaButton from '../cta-button/CtaButton'
 import Modal from '../../components/project-modal/ProjectModal'
 
-export interface ProjectData {
-  id: number
+export interface IProjectData {
   title: string
   icon: string
   color: string
@@ -17,7 +16,7 @@ export interface ProjectData {
   githubLink: string
 }
 
-const SingleProject: React.FC<ProjectData> = (data) => {
+const SingleProject: React.FC<IProjectData> = (data) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
