@@ -18,18 +18,10 @@ const App:React.FC = () => {
         <Router>
           <Navbar />
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='/projects'>
-              <Projects />
-            </Route>
-            <Route path='/about'>
-              <About />
-            </Route>
-            <Route>
-              <Error />
-            </Route>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/projects' component={Projects} />
+            <Route exact path='/about' component={About} />
+            <Route component={Error} />
           </Switch>
           <Footer />
         </Router>

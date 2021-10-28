@@ -71,8 +71,7 @@ export const Techs = styled.div`
   column-gap: 20px;
   row-gap: 10px;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
 
   min-height: 90px;
 
@@ -84,14 +83,9 @@ export const Techs = styled.div`
 
   ${up("tablet")} {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
-`;
-
-export const Title = styled.p`
-  color: white;
-  font-size: ${({ theme }) => theme.font.sizes.heading_s};
 `;
 
 export const Tags = styled.div`
@@ -127,6 +121,12 @@ export const TechButton = styled.input`
     css`
       background-color: ${({ theme }) => theme.colors.darkGray};
     `};
+
+  transition: all ${({ theme }) => theme.transitionSpeed};
+
+  &:hover {
+    filter: brightness(130%);
+  }
 `;
 
 const shake = keyframes`
@@ -155,6 +155,8 @@ export const BinButton = styled.button`
     transform: translate3d(0, 0, 0);
     perspective: 1000px;
   }
+
+  flex-shrink: 0;
 `;
 
 export const Bin = styled.img`
@@ -168,6 +170,8 @@ export const Bin = styled.img`
 export const Illustration = styled.img`
   height: 60px;
   align-self: flex-end;
+
+  margin-left: 20px;
 
   ${down("tabletLarge")} {
     display: none;

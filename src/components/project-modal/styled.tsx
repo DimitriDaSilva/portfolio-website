@@ -1,5 +1,5 @@
 import { FaTimes } from 'react-icons/fa';
-import {down, up} from 'styled-breakpoints';
+import { down, up } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 
@@ -108,7 +108,8 @@ export const Title = styled.h3`
     content: '';
     display: block;
     float: left;
-    background: url(${process.env.PUBLIC_URL + '/assets/images/red-triangle.svg'}) no-repeat;
+    padding-right: 30px;
+    background: url(${process.env.PUBLIC_URL + '/assets/red-triangle.svg'}) no-repeat;
     background-size: contain;
     width: 25px;
     height: 25px;

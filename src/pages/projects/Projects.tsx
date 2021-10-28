@@ -3,7 +3,6 @@ import {
   OutterWrapper,
   FilterSection,
   Techs,
-  Title,
   Tags,
   TechButton,
   BinButton,
@@ -14,11 +13,13 @@ import {
 import projects from "../../projects";
 import { useState } from "react";
 
-const techCategories = projects
+const techCategoriesDuplicates = projects
   .map((project) => {
     return project.stack;
   })
   .flat(1);
+
+const techCategories = [...new Set<string>(techCategoriesDuplicates)];
 
 interface ISingleTech {
   key: number;
@@ -73,7 +74,6 @@ const Projects: React.FC = () => {
     <OutterWrapper>
       <FilterSection>
         <Techs>
-          <Title>Tech:</Title>
           <Tags>
             {techCategories
               .sort(
