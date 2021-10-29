@@ -14,7 +14,8 @@ const font = {
 };
 
 const breakpoints = {
-  mobile: 360,
+  smallMobile: 321,
+  mobile: 380,
   tablet: 760,
   tabletLarge: 1024,
   desktop: 1440,

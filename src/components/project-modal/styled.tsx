@@ -46,13 +46,14 @@ export const ProjectImages = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 460px;
 
   ${down('tablet')} {
     background-size: contain;
+    height: 250px;
   }
 
   ${up('tablet')} {
+    height: 460px;
     background-size: cover;
   }
 
@@ -101,41 +102,88 @@ export const TextSection = styled.div`
 `
 
 export const Title = styled.h3`
-  font-size: ${({ theme }) => theme.font.sizes.heading_s};
   color: ${({ theme }) => theme.colors.font};
+
+  ${down('smallMobile')} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+    line-height: 10px;
+  }
+
+  ${up('smallMobile')} {
+    font-size: ${({ theme }) => theme.font.sizes.heading_s};
+    line-height: normal;
+  }
 
   &::before {
     content: '';
     display: block;
     float: left;
-    padding-right: 30px;
     background: url(${process.env.PUBLIC_URL + '/assets/red-triangle.svg'}) no-repeat;
     background-size: contain;
-    width: 25px;
-    height: 25px;
+
+  ${down('smallMobile')} {
+    height: 15px;
+    padding-right: 20px;
   }
+
+  ${up('smallMobile')} {
+    height: 25px;
+    padding-right: 30px;
+  }
+
+  }
+
+  overflow-y: hidden;
 `
 
 export const Description = styled.p`
   white-space: pre-line;
 
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   color: ${({ theme }) => theme.colors.font};
   padding: 10px 0px;
+
+  overflow-y: hidden;
+
+  ${down('smallMobile')} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
+  }
+
+  ${up('smallMobile')} {
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  }
+
 `
 
 export const Stack = styled.p`
   white-space: pre-line;
 
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   color: ${({ theme }) => theme.colors.font};
+
+  overflow-y: hidden;
+
+  ${down('smallMobile')} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
+  }
+
+  ${up('smallMobile')} {
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  }
 `
 
 export const Skills = styled.p`
   white-space: pre-line;
 
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   color: ${({ theme }) => theme.colors.font};
+
+  overflow-y: hidden;
+
+  ${down('smallMobile')} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
+  }
+
+  ${up('smallMobile')} {
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  }
 `
 
 export const LinkSection = styled.div`
@@ -145,6 +193,8 @@ export const LinkSection = styled.div`
   align-items: center;
 
   width: 100%;
+
+  overflow-y: hidden;
 `
 
 export const CrossIcon = styled(FaTimes)`
