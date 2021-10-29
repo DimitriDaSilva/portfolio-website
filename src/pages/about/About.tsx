@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CtaButton from "../../components/cta-button/CtaButton";
 import { default as BioTitle } from "../../components/section-title/SectionTitle";
 import {
@@ -12,6 +13,8 @@ import {
   BioParagraph,
   SkillLogos,
   Logo,
+  ContactSection,
+  CallToAction,
 } from "./styled";
 
 const About: React.FC = () => {
@@ -92,9 +95,9 @@ const About: React.FC = () => {
             <BioParagraph>
               Having worked for a few companies in finance, I know that I thrive
               more in small structures. I am looking to join a start-up (between
-              3 and 20 people) and be part of an adventure along side an united
+              3 and 20 people) and be part of an adventure along side a united
               and ambitious team. This preference comes from my desire of having
-              responsability and freedom to build impactful and meaningful
+              responsibility and freedom to build impactful and meaningful
               projects.
               <br />
               <br />
@@ -105,7 +108,7 @@ const About: React.FC = () => {
           </BioSection>
           <BioSection>
             <BioTitle>Skills</BioTitle>
-            <BioParagraph>Technologies I am confortable with:</BioParagraph>
+            <BioParagraph>Technologies I am comfortable with:</BioParagraph>
             <SkillLogos>
               {Object.keys(confortableSkills).map((logo, index) => {
                 return (
@@ -149,7 +152,7 @@ const About: React.FC = () => {
               because it’s the kind of game where the potential for improvement
               is virtually limitless. I don’t always have the time to
               consistently play between my work, my side projects and my other
-              hobbies but when I do I love the math behind every decision. I
+              hobbies, but when I do I love the math behind every decision. I
               firmly believe that the self-discipline required to assess every
               spot and take the most viable decision builds skills that
               transpire in my everyday life.
@@ -157,6 +160,17 @@ const About: React.FC = () => {
           </BioSection>
         </Main>
       </Wrapper>
+      <ContactSection>
+        <CallToAction>Get in touch and tell me about yourself!</CallToAction>
+        <Link to="/contact">
+          <CtaButton
+            text="Let's chat"
+            onClick={() => {}}
+            id="primary"
+            type="button"
+          />
+        </Link>
+      </ContactSection>
     </>
   );
 };

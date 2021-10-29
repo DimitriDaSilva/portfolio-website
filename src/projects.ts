@@ -40,7 +40,7 @@ const projects = [
       "Byzans is my mentor's start-up, an app that provides readers a platform to exchange about the books they are currently reading. I helped Byzans working on a website version of the platform, more specifically:\n- I coded 2 web pages using React, TypeScript and styled-components\n- I took part in the refactoring of the back-end of the platform in Go with PostgreSQL and MongoDB as databases",
     skills: [
       "Scrum/agile development",
-      "Domain-driven design (DDD)",
+      "Domain-Driven Design (DDD)",
       "Git flow",
       "Component-Driven Development (CDD)",
       "Team work",

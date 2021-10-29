@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects";
 import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 import Error from "./pages/error/Error";
 import Footer from "./components/footer/Footer";
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
           <Route component={Error} />
         </Switch>
         <Footer />
