@@ -1,30 +1,32 @@
-import styled, { css } from 'styled-components'
-import { down, up } from 'styled-breakpoints';
+import styled, { css } from "styled-components";
+import { down, up } from "styled-breakpoints";
 
 export const Button = styled.input`
   font-family: ${({ theme }) => theme.font.families.paragraph};
   font-weight: bold;
   color: ${({ color }) => color};
 
-  ${down('smallMobile')} {
+  ${down("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
   }
 
-  ${up('smallMobile')} {
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  ${up("smallMobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   }
 
-  ${ props => props.id === 'primary' &&
+  ${(props) =>
+    props.id === "primary" &&
     css`
-    color: white;
-    background: ${({ theme }) => theme.colors.accent};
- `};
+      color: white;
+      background: ${({ theme }) => theme.colors.accent};
+    `};
 
-  ${ props => props.id !== 'primary' &&
+  ${(props) =>
+    props.id !== "primary" &&
     css`
-    color: white;
-    background: ${({ theme }) => theme.colors.lightGray};
- `};
+      color: white;
+      background: ${({ theme }) => theme.colors.lightGray};
+    `};
 
   border-radius: 2px;
   padding: 10px;
@@ -38,4 +40,4 @@ export const Button = styled.input`
   }
 
   overflow-y: hidden;
-`
+`;

@@ -55,11 +55,7 @@ export const NavLink = styled(Link)`
   color: ${({ theme }) => theme.colors.font};
   transition: color ${({ theme }) => theme.transitionSpeed};
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.accent};
-  }
-
-  &.active {
+  &:hover, &.active {
     color: ${({ theme }) => theme.colors.accent};
   }
 `
