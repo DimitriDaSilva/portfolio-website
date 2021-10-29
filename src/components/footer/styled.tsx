@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { FaGithub, FaLinkedin, FaTwitter, FaRegEnvelope } from 'react-icons/fa';
-import ReactTooltip from 'react-tooltip';
+import styled from "styled-components";
+import { FaGithub, FaLinkedin, FaTwitter, FaRegEnvelope } from "react-icons/fa";
+import ReactTooltip from "react-tooltip";
 
 export const Wrapper = styled.footer`
   display: flex;
@@ -11,8 +11,8 @@ export const Wrapper = styled.footer`
   height: ${({ theme }) => theme.footerHeight};
   width: 100vw;
 
-  background-color: ${({ theme }) => theme.colors.font}
-`
+  background-color: ${({ theme }) => theme.colors.font};
+`;
 
 export const SocialIcons = styled.ul`
   display: flex;
@@ -23,9 +23,20 @@ export const SocialIcons = styled.ul`
   margin: 0;
   width: 270px;
   height: 24px;
-`
+`;
 
-const formatSocialIcon = (icon: typeof FaLinkedin) => {
+export const A = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
+const formatSocialIcon = (
+  icon:
+    | typeof FaGithub
+    | typeof FaLinkedin
+    | typeof FaTwitter
+    | typeof FaRegEnvelope
+) => {
   return styled(icon)`
     background: transparent;
     font-size: 20px;
@@ -35,8 +46,8 @@ const formatSocialIcon = (icon: typeof FaLinkedin) => {
 
     &:hover {
       color: ${({ theme }) => theme.colors.lightGray};
-    }
-    `
+    display: flex;    }
+  `;
 };
 
 export const TwitterIcon = formatSocialIcon(FaTwitter);
@@ -48,12 +59,17 @@ export const EmailButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-`
+
+  display: flex;
+  align-items: center;
+`;
 
 export const Tooltip = styled(ReactTooltip).attrs(({ theme }) => ({
-  backgroundColor: `${theme.colors.lightGray}`
+  backgroundColor: `${theme.colors.lightGray}`,
 }))`
-`
+  overflow: hidden;
+  text-align: center;
+`;
 
 export const Copyright = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
@@ -61,4 +77,4 @@ export const Copyright = styled.p`
 
   padding: 0;
   margin: 0;
-`
+`;

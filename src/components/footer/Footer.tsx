@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Wrapper,
   SocialIcons,
+  A,
   LinkedinIcon,
   TwitterIcon,
   GithubIcon,
@@ -26,13 +27,13 @@ const Footer: React.FC = () => {
   return (
     <Wrapper>
       <SocialIcons>
-        <li><a href='https://www.linkedin.com/in/dimitri-da-silva/' target='_blank' rel='noreferrer'><LinkedinIcon /></a></li>
-        <li><a href='https://twitter.com/dimitri_d_s' target='_blank' rel='noreferrer'><TwitterIcon /></a></li>
-        <li><a href='https://github.com/DimitriDaSilva' target='_blank' rel='noreferrer'><GithubIcon /></a></li>
+        <li><A href='https://www.linkedin.com/in/dimitri-da-silva/' target='_blank' rel='noreferrer'><LinkedinIcon /></A></li>
+        <li><A href='https://twitter.com/dimitri_d_s' target='_blank' rel='noreferrer'><TwitterIcon /></A></li>
+        <li><A href='https://github.com/DimitriDaSilva' target='_blank' rel='noreferrer'><GithubIcon /></A></li>
         <li><EmailButton data-tip='' onClick={copyEmail} onMouseOut={onMouseOutHandler} ><EmailIcon /></EmailButton></li>
       </SocialIcons>
       <Copyright>© {new Date().getFullYear()} Dimitri Da Silva</Copyright>
-      <Tooltip multiline={false} getContent={() => {return tooltipMessage}}/>
+      <Tooltip multiline={false} scrollHide={true} getContent={() => {return tooltipMessage}}/>
     </Wrapper>
   );
 };

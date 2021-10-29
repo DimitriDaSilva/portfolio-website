@@ -37,6 +37,9 @@ export const NavLogo = styled(Link)`
 export const Img = styled.img`
   width: 50px;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
 `
 
 export const NavMenu = styled.ul`
