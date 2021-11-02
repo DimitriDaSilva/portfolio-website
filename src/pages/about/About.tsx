@@ -9,7 +9,6 @@ import {
   Title,
   GrayText,
   Main,
-  BioSection,
   BioParagraph,
   SkillLogos,
   Logo,
@@ -24,9 +23,9 @@ const About: React.FC = () => {
       module: r(fileName),
     }));
 
-  const confortableSkills: any = importAll(
+  const comfortableSkills: any = importAll(
     require.context(
-      "../../../public/assets/skills_logo/confortable",
+      "../../../public/assets/skills_logo/comfortable",
       false,
       /\.(png|jpe?g|svg)$/
     )
@@ -72,7 +71,7 @@ const About: React.FC = () => {
           </a>
         </Header>
         <Main>
-          <BioSection>
+          <div>
             <BioTitle>Background</BioTitle>
             <BioParagraph>
               While still working in corporate finance, I started learning code
@@ -89,8 +88,8 @@ const About: React.FC = () => {
               engineer and CEO at Byzans, I continued learning about both
               front-end and back-end web development.
             </BioParagraph>
-          </BioSection>
-          <BioSection>
+          </div>
+          <div>
             <BioTitle>Goals</BioTitle>
             <BioParagraph>
               Having worked for a few companies in finance, I know that I thrive
@@ -105,16 +104,16 @@ const About: React.FC = () => {
               am always honing my craft building various projects. Do more is my
               motto.
             </BioParagraph>
-          </BioSection>
-          <BioSection>
+          </div>
+          <div>
             <BioTitle>Skills</BioTitle>
             <BioParagraph>Technologies I am comfortable with:</BioParagraph>
-            <SkillLogos>
-              {Object.keys(confortableSkills).map((logo, index) => {
+            <SkillLogos style={{ marginBottom: "20px" }}>
+              {Object.keys(comfortableSkills).map((logo, index) => {
                 return (
                   <Logo
                     key={index}
-                    src={confortableSkills[logo].module.default}
+                    src={comfortableSkills[logo].module.default}
                     alt="logo"
                   />
                 );
@@ -134,8 +133,8 @@ const About: React.FC = () => {
                 );
               })}
             </SkillLogos>
-          </BioSection>
-          <BioSection>
+          </div>
+          <div>
             <BioTitle>Hobbies</BioTitle>
             <BioParagraph>
               My trusted Kindle never too far, reading is for me a daily ritual
@@ -157,7 +156,7 @@ const About: React.FC = () => {
               spot and take the most viable decision builds skills that
               transpire in my everyday life.
             </BioParagraph>
-          </BioSection>
+          </div>
         </Main>
       </Wrapper>
       <ContactSection>

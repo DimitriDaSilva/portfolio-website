@@ -1,7 +1,6 @@
-import { FaTimes } from 'react-icons/fa';
-import { down, up } from 'styled-breakpoints';
-import styled from 'styled-components';
-
+import { FaTimes } from "react-icons/fa";
+import { down, up } from "styled-breakpoints";
+import styled from "styled-components";
 
 export const Background = styled.div`
   position: fixed;
@@ -11,9 +10,9 @@ export const Background = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
-`
+`;
 
-export const Wrapper = styled.div`
+export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -27,40 +26,57 @@ export const Wrapper = styled.div`
 
   background: ${({ theme }) => theme.colors.bg};
 
-  ${down('tablet')} {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
+
+  ${up("tablet")} {
+    width: ${({ theme }) => theme.breakpoints.tablet}px;
   }
 
-  ${up('tablet')} {
-    width: 760px;
-    height: auto;
+  @media (max-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
+    flex-direction: row;
   }
 
   z-index: 1000;
-`
+`;
 
-export const ProjectImages = styled.div`
+//@media ((min-height: ${({ theme }) =>
+//theme.breakpoints.tablet}px) and (max-width: ${({ theme }) =>
+//theme.breakpoints.tablet}px)) or ((max-height: ${({ theme }) =>
+//theme.breakpoints.tablet}px) and (min-width: ${({ theme }) =>
+//theme.breakpoints.tablet}px)) {
+//height: 100vh;
+//width: 100vw;
+//}
+
+//@media (min-height: ${({ theme }) =>
+//theme.breakpoints.tablet}px) and (min-width: ${({ theme }) =>
+//theme.breakpoints.tablet}px) {
+//height: ${({ theme }) => theme.breakpoints.tablet}px;
+//width: ${({ theme }) => theme.breakpoints.tablet}px;
+//}
+
+export const ImageSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
 
-  ${down('tablet')} {
-    background-size: contain;
-    height: 250px;
+  @media (max-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
+    height: 100%;
   }
 
-  ${up('tablet')} {
-    height: 460px;
-    background-size: cover;
+  @media (min-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
+    height: 50%;
   }
+
+  background-size: cover;
 
   background-repeat: no-repeat;
   background-color: ${({ theme }) => theme.colors.lightGray};
   background-position: center;
-`
+`;
 
 export const Slider = styled.div`
   display: flex;
@@ -70,21 +86,19 @@ export const Slider = styled.div`
   height: 100%;
   width: 30px;
 
-  background: rgba( 0, 0, 0, 0.7 );
+  background: rgba(0, 0, 0, 0.7);
 
   cursor: pointer;
-`
+`;
 
-export const InnerWrapper = styled.div`
-  ${down('tablet')} {
-    height: auto;
+export const TextSection = styled.div`
+  @media (max-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
+    height: 100%;
   }
 
-  ${up('tablet')} {
-    height: 300px;
+  @media (min-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
+    height: 50%;
   }
-
-  flex-grow: 4;
 
   padding: 14px;
 
@@ -92,49 +106,49 @@ export const InnerWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
-export const TextSection = styled.div`
+export const Text = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-`
+`;
 
 export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.font};
 
-  ${down('smallMobile')} {
+  ${down("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
     line-height: 10px;
   }
 
-  ${up('smallMobile')} {
+  ${up("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.heading_s};
     line-height: normal;
   }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     float: left;
-    background: url(${process.env.PUBLIC_URL + '/assets/red-triangle.svg'}) no-repeat;
+    background: url(${process.env.PUBLIC_URL + "/assets/red-triangle.svg"})
+      no-repeat;
     background-size: contain;
 
-  ${down('smallMobile')} {
-    height: 15px;
-    padding-right: 20px;
-  }
+    ${down("smallMobile")} {
+      height: 15px;
+      padding-right: 20px;
+    }
 
-  ${up('smallMobile')} {
-    height: 25px;
-    padding-right: 30px;
-  }
-
+    ${up("smallMobile")} {
+      height: 25px;
+      padding-right: 30px;
+    }
   }
 
   overflow-y: hidden;
-`
+`;
 
 export const Description = styled.p`
   white-space: pre-line;
@@ -144,15 +158,14 @@ export const Description = styled.p`
 
   overflow-y: hidden;
 
-  ${down('smallMobile')} {
+  ${down("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
   }
 
-  ${up('smallMobile')} {
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  ${up("smallMobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   }
-
-`
+`;
 
 export const Stack = styled.p`
   white-space: pre-line;
@@ -161,14 +174,14 @@ export const Stack = styled.p`
 
   overflow-y: hidden;
 
-  ${down('smallMobile')} {
+  ${down("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
   }
 
-  ${up('smallMobile')} {
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  ${up("smallMobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   }
-`
+`;
 
 export const Skills = styled.p`
   white-space: pre-line;
@@ -177,14 +190,14 @@ export const Skills = styled.p`
 
   overflow-y: hidden;
 
-  ${down('smallMobile')} {
+  ${down("smallMobile")} {
     font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
   }
 
-  ${up('smallMobile')} {
-  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  ${up("smallMobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   }
-`
+`;
 
 export const LinkSection = styled.div`
   display: flex;
@@ -195,7 +208,7 @@ export const LinkSection = styled.div`
   width: 100%;
 
   overflow-y: hidden;
-`
+`;
 
 export const CrossIcon = styled(FaTimes)`
   cursor: pointer;
@@ -203,7 +216,7 @@ export const CrossIcon = styled(FaTimes)`
   font-size: 25px;
   font-weight: thin;
   color: ${({ theme }) => theme.colors.font};
-`
+`;
 
 export const Links = styled.div`
   display: flex;
@@ -212,5 +225,4 @@ export const Links = styled.div`
   align-items: center;
 
   width: 250px;
-`
-
+`;

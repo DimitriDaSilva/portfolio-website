@@ -4,11 +4,11 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 import {
   Background,
-  Wrapper,
-  ProjectImages,
+  Modal,
+  ImageSection,
   Slider,
-  InnerWrapper,
   TextSection,
+  Text,
   Title,
   Description,
   Stack,
@@ -53,6 +53,11 @@ const ProjectModal: React.FC<IProps> = ({
     }
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.documentElement.style.overflowY = "scroll";
+  };
+
   const portalDiv = document.getElementById("portal");
 
   return portalDiv
@@ -61,13 +66,13 @@ const ProjectModal: React.FC<IProps> = ({
           ref={modalRef}
           onClick={(e) => {
             if (modalRef.current === e.target) {
-              setIsModalOpen(false);
+              closeModal();
             }
           }}
         >
-          <Wrapper>
+          <Modal>
             {data.images.length !== 0 && (
-              <ProjectImages
+              <ImageSection
                 style={{ backgroundImage: `url(${data.images[currImg]})` }}
               >
                 {data.images.length > 1 && (
@@ -80,10 +85,10 @@ const ProjectModal: React.FC<IProps> = ({
                     </Slider>
                   </>
                 )}
-              </ProjectImages>
+              </ImageSection>
             )}
-            <InnerWrapper>
-              <TextSection>
+            <TextSection>
+              <Text>
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
                 <Stack>
@@ -92,9 +97,9 @@ const ProjectModal: React.FC<IProps> = ({
                 <Skills>
                   <strong>What I learned:</strong> {data.skills.join(" / ")}
                 </Skills>
-              </TextSection>
+              </Text>
               <LinkSection>
-                <CrossIcon onClick={() => setIsModalOpen(false)} />
+                <CrossIcon onClick={() => closeModal()} />
                 <Links>
                   {data.websiteLink !== "" && (
                     <a href={data.websiteLink} target="_blank" rel="noreferrer">
@@ -118,8 +123,8 @@ const ProjectModal: React.FC<IProps> = ({
                   )}
                 </Links>
               </LinkSection>
-            </InnerWrapper>
-          </Wrapper>
+            </TextSection>
+          </Modal>
         </Background>,
         portalDiv
       )

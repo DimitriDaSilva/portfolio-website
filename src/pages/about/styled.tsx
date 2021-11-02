@@ -118,8 +118,6 @@ export const Main = styled.div`
   margin-bottom: 30px;
 `;
 
-export const BioSection = styled.div``;
-
 export const BioParagraph = styled.p`
   color: ${({ theme }) => theme.colors.font};
 `;
@@ -130,7 +128,7 @@ export const SkillLogos = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 10px;
+  column-gap: 15px;
   row-gap: 5px;
 
   margin-top: 10px;
