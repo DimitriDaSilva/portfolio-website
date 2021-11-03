@@ -10,6 +10,7 @@ import {
   GrayText,
   Main,
   BioParagraph,
+  BioLink,
   SkillLogos,
   Logo,
   ContactSection,
@@ -75,18 +76,47 @@ const About: React.FC = () => {
             <BioTitle>Background</BioTitle>
             <BioParagraph>
               While still working in corporate finance, I started learning code
-              through Harvard’s online course CS50x Introduction to Computer
-              Science and it just clicked for me.
+              through Harvard’s online course{" "}
+              <BioLink
+                href="https://cs50.harvard.edu/x/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CS50x
+              </BioLink>{" "}
+              Introduction to Computer Science and it just clicked for me.
               <br />
               <br />
               In pursuit of a more fulfilling line of work, I opted to change
-              careers. I went on to learn the basics of web development on
-              freeCodeCamp. Eager for knowledge, I enrolled in 42, a
-              project-based computer science program that taught me
+              careers. I went on to learn the basics of web development on{" "}
+              <BioLink
+                href="https://www.freecodecamp.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                freeCodeCamp
+              </BioLink>
+              . Eager for knowledge, I enrolled in{" "}
+              <BioLink
+                href="https://42.fr/en/homepage/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                42
+              </BioLink>
+              , a project-based computer science program that taught me
               self-discipline and a well-rounded set of programming skills. On
               the side, with the help of my mentor, an experienced software
-              engineer and CEO at Byzans, I continued learning about both
-              front-end and back-end web development.
+              engineer and CEO at{" "}
+              <BioLink
+                href="https://byzans.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Byzans
+              </BioLink>
+              , I continued learning about both front-end and back-end web
+              development.
             </BioParagraph>
           </div>
           <div>

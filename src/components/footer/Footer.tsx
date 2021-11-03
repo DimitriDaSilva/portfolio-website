@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { Wrapper,
+import { useState } from "react";
+import {
+  Wrapper,
   SocialIcons,
   A,
   LinkedinIcon,
@@ -8,32 +9,71 @@ import { Wrapper,
   EmailIcon,
   EmailButton,
   Tooltip,
-  Copyright } from './styled'
+  Copyright,
+} from "./styled";
 
 const Footer: React.FC = () => {
-  const defaultMessage = 'Copy email to clipboard';
-  const successMessage = 'Email copied to clipboard'
+  const defaultMessage = "Copy email to clipboard";
+  const successMessage = "Email copied to clipboard";
   const [tooltipMessage, setTooltipMessage] = useState(defaultMessage);
 
   const copyEmail = (): void => {
-    navigator.clipboard.writeText('dimitri.gomes.da.silva@gmail.com');
+    navigator.clipboard.writeText("dimitri.gomes.da.silva@gmail.com");
     setTooltipMessage(successMessage);
   };
 
   const onMouseOutHandler = (): void => {
     setTooltipMessage(defaultMessage);
-  }
+  };
 
   return (
     <Wrapper>
       <SocialIcons>
-        <li><A href='https://www.linkedin.com/in/dimitri-da-silva/' target='_blank' rel='noreferrer'><LinkedinIcon /></A></li>
-        <li><A href='https://twitter.com/dimitri_d_s' target='_blank' rel='noreferrer'><TwitterIcon /></A></li>
-        <li><A href='https://github.com/DimitriDaSilva' target='_blank' rel='noreferrer'><GithubIcon /></A></li>
-        <li><EmailButton data-tip='' onClick={copyEmail} onMouseOut={onMouseOutHandler} ><EmailIcon /></EmailButton></li>
+        <li>
+          <A
+            href="https://www.linkedin.com/in/dimitri-da-silva/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LinkedinIcon />
+          </A>
+        </li>
+        <li>
+          <A
+            href="https://twitter.com/dimitri_d_s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <TwitterIcon />
+          </A>
+        </li>
+        <li>
+          <A
+            href="https://github.com/DimitriDaSilva"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GithubIcon />
+          </A>
+        </li>
+        <li>
+          <EmailButton
+            data-tip=""
+            onClick={copyEmail}
+            onMouseOut={onMouseOutHandler}
+          >
+            <EmailIcon />
+          </EmailButton>
+        </li>
       </SocialIcons>
       <Copyright>© {new Date().getFullYear()} Dimitri Da Silva</Copyright>
-      <Tooltip multiline={false} scrollHide={true} getContent={() => {return tooltipMessage}}/>
+      <Tooltip
+        multiline={false}
+        scrollHide={true}
+        getContent={() => {
+          return tooltipMessage;
+        }}
+      />
     </Wrapper>
   );
 };

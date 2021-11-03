@@ -113,6 +113,7 @@ export const Main = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 2fr;
+    column-gap: 15px;
   }
 
   margin-bottom: 30px;
@@ -120,6 +121,26 @@ export const Main = styled.div`
 
 export const BioParagraph = styled.p`
   color: ${({ theme }) => theme.colors.font};
+`;
+
+export const BioLink = styled.a`
+  background: linear-gradient(
+    to bottom,
+    ${({ theme }) => theme.colors.accent} 0%,
+    ${({ theme }) => theme.colors.accent} 100%
+  );
+
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 100% 1px;
+  color: ${({ theme }) => theme.colors.font};
+  text-decoration: none;
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    background-size: 100% 100%;
+    color: white;
+  }
 `;
 
 export const SkillLogos = styled.div`
