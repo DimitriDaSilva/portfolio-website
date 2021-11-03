@@ -1,5 +1,5 @@
 import { FaTimes } from "react-icons/fa";
-import { down, up } from "styled-breakpoints";
+import { up } from "styled-breakpoints";
 import styled from "styled-components";
 
 export const Background = styled.div`
@@ -8,7 +8,7 @@ export const Background = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 `;
 
@@ -27,7 +27,6 @@ export const Modal = styled.div`
   background: ${({ theme }) => theme.colors.bg};
 
   width: 100vw;
-  height: 100vh;
 
   ${up("tablet")} {
     width: ${({ theme }) => theme.breakpoints.tablet}px;
@@ -40,42 +39,25 @@ export const Modal = styled.div`
   z-index: 1000;
 `;
 
-//@media ((min-height: ${({ theme }) =>
-//theme.breakpoints.tablet}px) and (max-width: ${({ theme }) =>
-//theme.breakpoints.tablet}px)) or ((max-height: ${({ theme }) =>
-//theme.breakpoints.tablet}px) and (min-width: ${({ theme }) =>
-//theme.breakpoints.tablet}px)) {
-//height: 100vh;
-//width: 100vw;
-//}
-
-//@media (min-height: ${({ theme }) =>
-//theme.breakpoints.tablet}px) and (min-width: ${({ theme }) =>
-//theme.breakpoints.tablet}px) {
-//height: ${({ theme }) => theme.breakpoints.tablet}px;
-//width: ${({ theme }) => theme.breakpoints.tablet}px;
-//}
-
 export const ImageSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 100%;
 
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
   @media (max-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
-    height: 100%;
+    height: 100vh;
   }
 
   @media (min-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
-    height: 50%;
+    height: auto;
   }
+`;
 
-  background-size: cover;
-
-  background-repeat: no-repeat;
-  background-color: ${({ theme }) => theme.colors.lightGray};
-  background-position: center;
+export const Image = styled.img`
+  height: auto;
 `;
 
 export const Slider = styled.div`
@@ -89,18 +71,23 @@ export const Slider = styled.div`
   background: rgba(0, 0, 0, 0.7);
 
   cursor: pointer;
+
+  position: absolute;
+  top: 0;
 `;
 
 export const TextSection = styled.div`
   @media (max-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
-    height: 100%;
+    height: 100vh;
   }
 
   @media (min-height: ${({ theme }) => theme.breakpoints.mobileLarge}px) {
-    height: 50%;
+    height: auto;
   }
 
   padding: 14px;
+
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -109,23 +96,33 @@ export const TextSection = styled.div`
 `;
 
 export const Text = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  margin-bottom: 15px;
+
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
+
+  @media (min-height: ${({ theme }) =>
+      theme.breakpoints.mobileLarge}px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.smallMobile}px) {
+    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
+  }
 `;
 
 export const Title = styled.h3`
+  width: 100%;
   color: ${({ theme }) => theme.colors.font};
 
-  ${down("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
-    line-height: 10px;
-  }
+  font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
 
-  ${up("smallMobile")} {
+  @media (min-height: ${({ theme }) =>
+      theme.breakpoints.mobileLarge}px) and (min-width: ${({ theme }) =>
+      theme.breakpoints.smallMobile}px) {
     font-size: ${({ theme }) => theme.font.sizes.heading_s};
-    line-height: normal;
   }
 
   &::before {
@@ -136,12 +133,12 @@ export const Title = styled.h3`
       no-repeat;
     background-size: contain;
 
-    ${down("smallMobile")} {
-      height: 15px;
-      padding-right: 20px;
-    }
+    height: 15px;
+    padding-right: 20px;
 
-    ${up("smallMobile")} {
+    @media (min-height: ${({ theme }) =>
+        theme.breakpoints.mobileLarge}px) and (min-width: ${({ theme }) =>
+        theme.breakpoints.smallMobile}px) {
       height: 25px;
       padding-right: 30px;
     }
@@ -151,6 +148,8 @@ export const Title = styled.h3`
 `;
 
 export const Description = styled.p`
+  width: 100%;
+
   white-space: pre-line;
 
   color: ${({ theme }) => theme.colors.font};
@@ -158,45 +157,31 @@ export const Description = styled.p`
 
   overflow-y: hidden;
 
-  ${down("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
-  }
-
-  ${up("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
-  }
+  font-size: 1em;
 `;
 
 export const Stack = styled.p`
+  width: 100%;
+
   white-space: pre-line;
 
   color: ${({ theme }) => theme.colors.font};
 
   overflow-y: hidden;
 
-  ${down("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
-  }
-
-  ${up("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
-  }
+  font-size: 1em;
 `;
 
 export const Skills = styled.p`
+  width: 100%;
+
   white-space: pre-line;
 
   color: ${({ theme }) => theme.colors.font};
 
   overflow-y: hidden;
 
-  ${down("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_s};
-  }
-
-  ${up("smallMobile")} {
-    font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
-  }
+  font-size: 1em;
 `;
 
 export const LinkSection = styled.div`

@@ -6,6 +6,7 @@ import {
   Background,
   Modal,
   ImageSection,
+  Image,
   Slider,
   TextSection,
   Text,
@@ -72,15 +73,20 @@ const ProjectModal: React.FC<IProps> = ({
         >
           <Modal>
             {data.images.length !== 0 && (
-              <ImageSection
-                style={{ backgroundImage: `url(${data.images[currImg]})` }}
-              >
+              <ImageSection style={{ backgroundColor: `${data.color}` }}>
+                <Image src={data.images[currImg]} alt="project" />
                 {data.images.length > 1 && (
                   <>
-                    <Slider onClick={() => updateImg(-1)}>
+                    <Slider
+                      onClick={() => updateImg(-1)}
+                      style={{ left: "0px" }}
+                    >
                       <FaAngleLeft color="white" size="20px" />
                     </Slider>
-                    <Slider onClick={() => updateImg(1)}>
+                    <Slider
+                      onClick={() => updateImg(1)}
+                      style={{ right: "0px" }}
+                    >
                       <FaAngleRight color="white" size="20px" />
                     </Slider>
                   </>
