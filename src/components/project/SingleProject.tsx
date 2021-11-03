@@ -26,9 +26,9 @@ const SingleProject: React.FC<IProjectData> = (data) => {
 
   return (
     <Wrapper color={data.color}>
-      <Icon src={data.icon} alt="icon" />
       <InnerWrapper>
         <Text>
+          <Icon src={data.icon} alt="icon" color={data.color} />
           <Title>{data.title}</Title>
           <Stack>{data.stack.slice(0, 3).join(" / ")}</Stack>
         </Text>

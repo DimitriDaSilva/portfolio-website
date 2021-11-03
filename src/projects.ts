@@ -1,5 +1,27 @@
 const projects = [
   {
+    title: "Byzans, a community for readers",
+    icon: "/assets/projects/byzans/logo.svg",
+    color: "#625ED8",
+    stack: ["React", "TypeScript", "Go", "MongoDB", "PostgreSQL"],
+    description:
+      "Byzans is my mentor's start-up, an app that provides readers a platform to exchange about the books they are currently reading. I helped Byzans working on a website version of the platform, more specifically:\n- I coded 2 web pages using React, TypeScript and styled-components\n- I took part in the refactoring of the back-end of the platform in Go with PostgreSQL and MongoDB as databases",
+    skills: [
+      "Scrum/agile development",
+      "Domain-Driven Design (DDD)",
+      "Git flow",
+      "Component-Driven Development (CDD)",
+      "Team work",
+    ],
+    images: [
+      "/assets/projects/byzans/image1.png",
+      "/assets/projects/byzans/image2.png",
+      "/assets/projects/byzans/image3.png",
+    ],
+    websiteLink: "https://byzans.com/",
+    githubLink: "",
+  },
+  {
     title: "A feature-packed to-do list",
     icon: "/assets/projects/to-do-list/logo.svg",
     color: "#FFC176",
@@ -30,28 +52,6 @@ const projects = [
     images: [],
     websiteLink: "",
     githubLink: "https://github.com/DimitriDaSilva/portfolio-website",
-  },
-  {
-    title: "Byzans, a community for readers",
-    icon: "/assets/projects/byzans/logo.svg",
-    color: "#625ED8",
-    stack: ["React", "TypeScript", "Go", "MongoDB", "PostgreSQL"],
-    description:
-      "Byzans is my mentor's start-up, an app that provides readers a platform to exchange about the books they are currently reading. I helped Byzans working on a website version of the platform, more specifically:\n- I coded 2 web pages using React, TypeScript and styled-components\n- I took part in the refactoring of the back-end of the platform in Go with PostgreSQL and MongoDB as databases",
-    skills: [
-      "Scrum/agile development",
-      "Domain-Driven Design (DDD)",
-      "Git flow",
-      "Component-Driven Development (CDD)",
-      "Team work",
-    ],
-    images: [
-      "/assets/projects/byzans/image1.png",
-      "/assets/projects/byzans/image2.png",
-      "/assets/projects/byzans/image3.png",
-    ],
-    websiteLink: "https://byzans.com/",
-    githubLink: "",
   },
   {
     title: "A team-built shell",

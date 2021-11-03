@@ -14,31 +14,30 @@ export const Wrapper = styled.div`
   border-radius: 2px;
 `;
 
-export const Icon = styled.img`
-  width: 100px;
-  opacity: 1;
-  display: block;
-
-  transition: all 2s linear;
-
-  ${Wrapper}:hover & {
-    width: 110px;
-    opacity: 0;
-    display: none;
-  } ;
-`;
-
 export const InnerWrapper = styled.div`
-  display: none;
+  position: relative;
 
   height: 100%;
+  width: 100%;
 
-  ${Wrapper}:hover & {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  } ;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  z-index: 0;
+`;
+
+export const Icon = styled.img`
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 150px;
+  z-index: -1;
+
+  filter: invert(100%) opacity(20%);
 `;
 
 export const Text = styled.div`
