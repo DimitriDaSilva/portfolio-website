@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { Wrapper, Icon, InnerWrapper, Text, Title, Stack } from "./styled";
-import CtaButton from "../cta-button/CtaButton";
+import { Wrapper, Icon, Text, Title, Stack } from "./styled";
 import Modal from "../../components/project-modal/ProjectModal";
+import ProjectButton from "../project-button/ProjectButton";
 
 export interface IProjectData {
   title: string;
@@ -26,24 +26,17 @@ const SingleProject: React.FC<IProjectData> = (data) => {
 
   return (
     <Wrapper color={data.color}>
-      <InnerWrapper>
-        <Text>
-          <Icon src={data.icon} alt="icon" color={data.color} />
-          <Title>{data.title}</Title>
-          <Stack>{data.stack.slice(0, 3).join(" / ")}</Stack>
-        </Text>
-        <CtaButton
-          text="View more"
-          onClick={openModal}
-          id="primary"
-          type="button"
-        />
-        <Modal
-          isModalOpen={isModalOpen}
-          setIsModalOpen={setIsModalOpen}
-          data={data}
-        />
-      </InnerWrapper>
+      <Icon src={data.icon} alt="icon" color={data.color} />
+      <Text>
+        <Title>{data.title}</Title>
+        <Stack>{data.stack.slice(0, 3).join(" / ")}</Stack>
+      </Text>
+      <ProjectButton text="View more" onClick={openModal} type="button" />
+      <Modal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        data={data}
+      />
     </Wrapper>
   );
 };

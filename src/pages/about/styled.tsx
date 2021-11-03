@@ -135,8 +135,10 @@ export const BioLink = styled.a`
   background-repeat: repeat-x;
   background-size: 100% 1px;
   color: ${({ theme }) => theme.colors.font};
+
   text-decoration: none;
-  transition: all 0.25s ease-out;
+
+  transition: all 0.1s ease-out;
 
   &:hover {
     background-size: 100% 100%;

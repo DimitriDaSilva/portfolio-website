@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 
@@ -12,20 +13,10 @@ export const Wrapper = styled.div`
 
   box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-`;
 
-export const InnerWrapper = styled.div`
   position: relative;
 
-  height: 100%;
-  width: 100%;
-
   overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 
   z-index: 0;
 `;
@@ -45,12 +36,11 @@ export const Text = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 15px;
 `;
 
 export const Title = styled.h3`
-  padding: 0;
-  margin: 0;
-
   font-size: ${({ theme }) => theme.font.sizes.heading_s};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.bg};
