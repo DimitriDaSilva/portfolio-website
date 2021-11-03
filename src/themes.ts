@@ -42,7 +42,6 @@ export const themes = {
     transitionSpeed: "0.1s",
     footerHeight: "72px",
     navbarHeight: "88px",
-    projectModalHeight: "700px",
   },
 };
 

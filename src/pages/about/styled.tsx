@@ -66,6 +66,7 @@ export const Header = styled.div`
   ${down("tablet")} {
     flex-direction: column;
     align-items: flex-start;
+    row-gap: 20px;
   }
 
   ${up("tablet")} {
@@ -180,7 +181,8 @@ export const ContactSection = styled.div`
   background-color: ${({ theme }) => theme.colors.lightGray};
 
   ${down("mobile")} {
-    height: 70px;
+    height: auto;
+    padding: 10px;
   }
 
   ${up("mobile")} {
@@ -199,6 +201,7 @@ export const CallToAction = styled.h1`
   ${down("mobile")} {
     padding: 0px 10px;
     font-size: ${({ theme }) => theme.font.sizes.heading_m};
+    padding-bottom: 10px;
   }
 
   ${up("mobile")} {
