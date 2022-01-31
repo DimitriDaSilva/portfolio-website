@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
+
 import CtaButton from "../../components/cta-button/CtaButton";
 import { default as BioTitle } from "../../components/section-title/SectionTitle";
 import {
@@ -16,6 +18,12 @@ import {
   ContactSection,
   CallToAction,
 } from "./styled";
+
+const getSkillName = (path: string): string | undefined => {
+  const filename: string | undefined = path.split(/(\\|\/)/g).pop();
+
+  return filename?.split(".")[0];
+};
 
 const About: React.FC = () => {
   const importAll = (r: __WebpackModuleApi.RequireContext) =>
@@ -104,9 +112,9 @@ const About: React.FC = () => {
               >
                 42
               </BioLink>
-              , a project-based computer science program that taught me
-              self-discipline and a well-rounded set of programming skills. On
-              the side, with the help of my mentor, an experienced software
+              , an innovative project-based computer science program that taught
+              me self-discipline and a well-rounded set of programming skills.
+              On the side, with the help of my mentor, an experienced software
               engineer and CEO at{" "}
               <BioLink
                 href="https://byzans.com/"
@@ -124,14 +132,13 @@ const About: React.FC = () => {
             <BioParagraph>
               From experience, I thrive more in small-size companies. I wish to
               have responsibility and freedom to build impactful and meaningful
-              projects. I am looking to join a start-up (between 5 and 20
-              people) and be part of an adventure along side a united and
-              ambitious team.
+              projects. I am looking to join a start-up and be part of an
+              adventure along side a united and ambitious team.
               <br />
               <br />
-              At the moment, I am full stack with a front-end specialisation. I
-              am continuously honing my craft building projects. Do more is my
-              motto.
+              At the moment, I am a front-end web developer but I am aiming to
+              be full stack by continuously honing my craft building challenging
+              projects. Do more is my motto.
             </BioParagraph>
           </div>
           <div>
@@ -140,11 +147,18 @@ const About: React.FC = () => {
             <SkillLogos style={{ marginBottom: "20px" }}>
               {Object.keys(comfortableSkills).map((logo, index) => {
                 return (
-                  <Logo
-                    key={index}
-                    src={comfortableSkills[logo].module.default}
-                    alt="logo"
-                  />
+                  <>
+                    <Logo
+                      key={index}
+                      data-tip={getSkillName(
+                        comfortableSkills[logo].module.default
+                      )}
+                      src={comfortableSkills[logo].module.default}
+                      alt="logo"
+                      data-for={index}
+                    />
+                    <ReactTooltip id={`${index}`} />
+                  </>
                 );
               })}
             </SkillLogos>
@@ -154,11 +168,18 @@ const About: React.FC = () => {
             <SkillLogos>
               {Object.keys(experimentedSkills).map((logo, index) => {
                 return (
-                  <Logo
-                    key={index}
-                    src={experimentedSkills[logo].module.default}
-                    alt="logo"
-                  />
+                  <>
+                    <Logo
+                      key={index}
+                      data-tip={getSkillName(
+                        experimentedSkills[logo].module.default
+                      )}
+                      src={experimentedSkills[logo].module.default}
+                      alt="logo"
+                      data-for={index}
+                    />
+                    <ReactTooltip id={`${index}`} />
+                  </>
                 );
               })}
             </SkillLogos>
@@ -174,7 +195,7 @@ const About: React.FC = () => {
               <br />
               I have been swimming for the better part of my life. It’s my go-to
               to let off some steam (by a small margin ahead of a drink with
-              friends). I usually swim between 1 and 3 times a week.
+              friends).
               <br />
               <br />I started learning and playing poker because it’s more
               complex than meets the eye. I love the math behind every decision.

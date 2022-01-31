@@ -113,7 +113,7 @@ export const Main = styled.div`
   ${up("tabletLarge")} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 15px;
   }
 

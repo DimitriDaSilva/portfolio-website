@@ -24,7 +24,7 @@ const projects = [
     color: "#FFC176",
     stack: ["HTML", "CSS", "JavaScript"],
     description:
-      "A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it's fully customizable:\n- Background image using Unslapsh's API\n- Dark mode\n- Editable names and colors of the categories)",
+      "A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it's fully customizable:\n- Background image using Unslapsh's API\n- Dark mode\n- Editable names and colors of the categories",
     skills: ["DOM manipulation", "Events", "API calls", "Serverless functions"],
     images: [
       "/assets/projects/to-do-list/image1.png",
@@ -35,12 +35,12 @@ const projects = [
     githubLink: "https://github.com/DimitriDaSilva/yet-another-to-do-list",
   },
   {
-    title: "Byzans, a community for readers",
+    title: "A community for readers",
     icon: "/assets/projects/byzans/logo.svg",
     color: "#625ED8",
     stack: ["React", "TypeScript", "Go", "MongoDB", "PostgreSQL"],
     description:
-      "Byzans is my mentor's start-up, an app that provides readers a platform to exchange about the books they are currently reading. I helped Byzans working on a website version of the platform, more specifically:\n- I coded 2 web pages using React, TypeScript and styled-components\n- I took part in the refactoring of the back-end of the platform in Go with PostgreSQL and MongoDB as databases",
+      "Byzans is my mentor's start-up, an app that provides readers a platform to exchange about the books they are currently reading. I helped Byzans by working on a website version of the platform, more specifically:\n- I coded 2 web pages using React, TypeScript and styled-components\n- I took part in the refactoring of the back-end of the platform in Go with PostgreSQL and MongoDB as databases",
     skills: [
       "Scrum/agile development",
       "Domain-Driven Design (DDD)",
@@ -62,7 +62,7 @@ const projects = [
     color: "#25EF94",
     stack: ["React", "TypeScript"],
     description:
-      "My very own portfolio website. Like every developer, I will be continuously tweaking it and adding more project with time. To save myself some time, I used Figma to design it.",
+      "My very own portfolio website. Like every developer, I will be continuously tweaking it and adding more project with time. To improve on my UI/UX skills, I used Figma to design it.",
     skills: [
       "Component-Driven Development (CDD)",
       "Custom domain",
@@ -141,7 +141,7 @@ const projects = [
     githubLink: "https://github.com/DimitriDaSilva/42_push_swap",
   },
   {
-    title: "Reimplementation of C++ STL containers",
+    title: "A reimplementation of C++ STL containers",
     icon: "/assets/projects/stl-containers/logo.svg",
     color: "#A8DADC",
     stack: ["C++"],
