@@ -18,7 +18,7 @@ export const Modal = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
 
@@ -143,8 +143,6 @@ export const Title = styled.h3`
       padding-right: 30px;
     }
   }
-
-  overflow-y: hidden;
 `;
 
 export const Description = styled.p`
@@ -154,8 +152,6 @@ export const Description = styled.p`
 
   color: ${({ theme }) => theme.colors.font};
   padding: 10px 0px;
-
-  overflow-y: hidden;
 
   font-size: 1em;
 `;
@@ -167,8 +163,6 @@ export const Stack = styled.p`
 
   color: ${({ theme }) => theme.colors.font};
 
-  overflow-y: hidden;
-
   font-size: 1em;
 `;
 
@@ -178,8 +172,6 @@ export const Skills = styled.p`
   white-space: pre-line;
 
   color: ${({ theme }) => theme.colors.font};
-
-  overflow-y: hidden;
 
   font-size: 1em;
 `;
@@ -191,8 +183,6 @@ export const LinkSection = styled.div`
   align-items: center;
 
   width: 100%;
-
-  overflow-y: hidden;
 `;
 
 export const CrossIcon = styled(FaTimes)`
