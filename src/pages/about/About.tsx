@@ -71,12 +71,7 @@ const About: React.FC = () => {
             rel="noreferrer"
             style={{ flexShrink: 0 }}
           >
-            <CtaButton
-              text="Download my CV"
-              onClick={() => {}}
-              id="secondary"
-              type="button"
-            />
+            <CtaButton text="Download my CV" id="secondary" type="button" />
           </a>
         </Header>
         <Main>
@@ -208,12 +203,7 @@ const About: React.FC = () => {
       <ContactSection>
         <CallToAction>Get in touch and tell me about yourself!</CallToAction>
         <Link to="/contact">
-          <CtaButton
-            text="Let's chat"
-            onClick={() => {}}
-            id="primary"
-            type="button"
-          />
+          <CtaButton text="Let's chat" id="primary" type="button" />
         </Link>
       </ContactSection>
     </>
