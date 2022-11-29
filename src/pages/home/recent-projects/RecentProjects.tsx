@@ -11,9 +11,11 @@ const RecentProjects: React.FC = () => {
     <Wrapper>
       <SectionTitle>Recent projects</SectionTitle>
       <Projects>
-        {projects.slice(0, 3).map((project, index) => {
-          return <SingleProject key={index} {...project} />;
-        })}
+        {projects
+          .filter(({ showInHomePage }) => showInHomePage)
+          .map((project, index) => {
+            return <SingleProject key={index} {...project} />;
+          })}
       </Projects>
       <Link to="/projects">
         <CtaButton

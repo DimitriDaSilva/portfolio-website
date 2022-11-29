@@ -1,6 +1,7 @@
 const projects = [
   {
     title: "A cultural marketplace",
+    showInHomePage: true,
     icon: "/assets/projects/cultural-marketplace/logo.svg",
     color: "#064888",
     stack: ["React", "TypeScript", "GraphQL", "Redux Toolkit"],
@@ -20,6 +21,7 @@ const projects = [
   },
   {
     title: "A feature-packed to-do list",
+    showInHomePage: true,
     icon: "/assets/projects/to-do-list/logo.svg",
     color: "#FFC176",
     stack: ["HTML", "CSS", "JavaScript"],
@@ -36,6 +38,7 @@ const projects = [
   },
   {
     title: "A community for readers",
+    showInHomePage: true,
     icon: "/assets/projects/byzans/logo.svg",
     color: "#625ED8",
     stack: ["React", "TypeScript", "Go", "MongoDB", "PostgreSQL"],
@@ -58,6 +61,7 @@ const projects = [
   },
   {
     title: "My portfolio website",
+    showInHomePage: false,
     icon: "/assets/projects/portfolio-website/logo.svg",
     color: "#25EF94",
     stack: ["React", "TypeScript"],
@@ -74,6 +78,7 @@ const projects = [
   },
   {
     title: "A team-built shell",
+    showInHomePage: false,
     icon: "/assets/projects/minishell/logo.svg",
     color: "#25C3EF",
     stack: ["C"],
@@ -93,6 +98,7 @@ const projects = [
   },
   {
     title: "A open-source Discord bot",
+    showInHomePage: false,
     icon: "/assets/projects/discord-bot/logo.svg",
     color: "#FFB4A2",
     stack: ["Python"],
@@ -110,6 +116,7 @@ const projects = [
   },
   {
     title: "A raycasting engine",
+    showInHomePage: false,
     icon: "/assets/projects/cub3d/logo.svg",
     color: "#606C38",
     stack: ["C"],
@@ -130,6 +137,7 @@ const projects = [
   },
   {
     title: "An optimised sorting algorithm using stacks",
+    showInHomePage: false,
     icon: "/assets/projects/push_swap/logo.svg",
     color: "#F2CC8F",
     stack: ["C"],
@@ -142,6 +150,7 @@ const projects = [
   },
   {
     title: "A reimplementation of C++ STL containers",
+    showInHomePage: false,
     icon: "/assets/projects/stl-containers/logo.svg",
     color: "#A8DADC",
     stack: ["C++"],
@@ -158,6 +167,7 @@ const projects = [
   },
   {
     title: "An assembly library",
+    showInHomePage: false,
     icon: "/assets/projects/libasm/logo.svg",
     color: "#2A9D8F",
     stack: ["Assembly"],
