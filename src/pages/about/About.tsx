@@ -147,9 +147,8 @@ const About: React.FC = () => {
             <SkillLogos style={{ marginBottom: "20px" }}>
               {Object.keys(comfortableSkills).map((logo, index) => {
                 return (
-                  <>
+                  <div key={logo}>
                     <Logo
-                      key={index}
                       data-tip={getSkillName(
                         comfortableSkills[logo].module.default
                       )}
@@ -158,7 +157,7 @@ const About: React.FC = () => {
                       data-for={index}
                     />
                     <ReactTooltip id={`${index}`} />
-                  </>
+                  </div>
                 );
               })}
             </SkillLogos>
@@ -168,7 +167,7 @@ const About: React.FC = () => {
             <SkillLogos>
               {Object.keys(experimentedSkills).map((logo, index) => {
                 return (
-                  <>
+                  <div key={logo}>
                     <Logo
                       key={index}
                       data-tip={getSkillName(
@@ -179,7 +178,7 @@ const About: React.FC = () => {
                       data-for={index}
                     />
                     <ReactTooltip id={`${index}`} />
-                  </>
+                  </div>
                 );
               })}
             </SkillLogos>
