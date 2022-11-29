@@ -23,6 +23,10 @@ export const SocialIcons = styled.ul`
   margin: 0;
   width: 270px;
   height: 24px;
+
+  > li {
+    overflow-y: hidden;
+  }
 `;
 
 export const A = styled.a`
@@ -46,7 +50,8 @@ const formatSocialIcon = (
 
     &:hover {
       color: ${({ theme }) => theme.colors.lightGray};
-    display: flex;    }
+      display: flex;
+    }
   `;
 };
 
