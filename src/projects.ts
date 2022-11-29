@@ -1,5 +1,28 @@
 const projects = [
   {
+    title: "Mansa, a fintech statup",
+    showInHomePage: true,
+    icon: "/assets/projects/mansa/logo.svg",
+    color: "#7E66FF",
+    stack: ["Next.js", "React", "TypeScript"],
+    description:
+      "My first long-term job experience as a front-end engineer was in a fintech startup (€6m in equity raised). I was in a team of 4 front-end devs and 5 back-end. As the team was rather small, I had the opportunity to work on a lot of different parts of the app.",
+    skills: [
+      "Design system with Radix and Storybook",
+      "Unit testing with Jest",
+      "Integration testing with Cypress",
+      "Forms with react-hook-form",
+      "Form validation and safely-typed API responses with Zod",
+      "Caching and data fetching with React Query",
+    ],
+    images: [
+      "/assets/projects/mansa/image1.png",
+      "/assets/projects/mansa/image2.png",
+    ],
+    websiteLink: "https://getmansa.com/",
+    githubLink: "",
+  },
+  {
     title: "A cultural marketplace",
     showInHomePage: true,
     icon: "/assets/projects/cultural-marketplace/logo.svg",
@@ -18,23 +41,6 @@ const projects = [
     images: [],
     websiteLink: "",
     githubLink: "",
-  },
-  {
-    title: "A feature-packed to-do list",
-    showInHomePage: true,
-    icon: "/assets/projects/to-do-list/logo.svg",
-    color: "#FFC176",
-    stack: ["HTML", "CSS", "JavaScript"],
-    description:
-      "A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it's fully customizable:\n- Background image using Unslapsh's API\n- Dark mode\n- Editable names and colors of the categories",
-    skills: ["DOM manipulation", "Events", "API calls", "Serverless functions"],
-    images: [
-      "/assets/projects/to-do-list/image1.png",
-      "/assets/projects/to-do-list/image2.png",
-      "/assets/projects/to-do-list/image3.png",
-    ],
-    websiteLink: "https://yet-another-to-do-list.netlify.app/",
-    githubLink: "https://github.com/DimitriDaSilva/yet-another-to-do-list",
   },
   {
     title: "A community for readers",
@@ -58,6 +64,23 @@ const projects = [
     ],
     websiteLink: "https://byzans.com/",
     githubLink: "",
+  },
+  {
+    title: "A feature-packed to-do list",
+    showInHomePage: false,
+    icon: "/assets/projects/to-do-list/logo.svg",
+    color: "#FFC176",
+    stack: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A simple but cool project using vanilla JavaScript. I tried to add most of the features that I would expect in a to-do list app.\nIt supports drag-and-drop both with mouse and touch and it's fully customizable:\n- Background image using Unslapsh's API\n- Dark mode\n- Editable names and colors of the categories",
+    skills: ["DOM manipulation", "Events", "API calls", "Serverless functions"],
+    images: [
+      "/assets/projects/to-do-list/image1.png",
+      "/assets/projects/to-do-list/image2.png",
+      "/assets/projects/to-do-list/image3.png",
+    ],
+    websiteLink: "https://yet-another-to-do-list.netlify.app/",
+    githubLink: "https://github.com/DimitriDaSilva/yet-another-to-do-list",
   },
   {
     title: "My portfolio website",
