@@ -1,12 +1,12 @@
 const projects = [
   {
-    title: "Mansa, a fintech statup",
+    title: "Mansa, a fintech start-up",
     showInHomePage: true,
     icon: "/assets/projects/mansa/logo.svg",
     color: "#7E66FF",
     stack: ["Next.js", "React", "TypeScript"],
     description:
-      "My first long-term job experience as a front-end engineer was in a fintech startup (€6m in equity raised). I was in a team of 4 front-end devs and 5 back-end. As the team was rather small, I had the opportunity to work on a lot of different parts of the app.",
+      "My first long-term job experience as a front-end engineer was in a fintech start-up (€6m in equity raised). I was in a team of 4 front-end devs and 5 back-end. As the team was rather small, I had the opportunity to work on a lot of different parts of the app.",
     skills: [
       "Design system with Radix and Storybook",
       "Unit testing with Jest",
@@ -29,7 +29,7 @@ const projects = [
     color: "#064888",
     stack: ["React", "TypeScript", "GraphQL", "Redux Toolkit"],
     description:
-      "A freelance gig for a young startup that challenged me to build the front-end of their MVP. My focus was to build a scalable foundation based on features to ensure code maintainability.",
+      "A freelance gig for a young start-up that challenged me to build the front-end of their MVP. My focus was to build a scalable foundation based on features to ensure code maintainability.",
     skills: [
       "React internationalization",
       "Feature-based architecture",
