@@ -2,6 +2,12 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "emailjs-com": "3.2.0",
     "next": "13.0.6",
@@ -14,18 +20,6 @@
     "styled-components": "5.3.6",
     "typescript": "4.9.3",
     "web-vitals": "3.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "devDependencies": {
     "@types/react": "18.0.26",
