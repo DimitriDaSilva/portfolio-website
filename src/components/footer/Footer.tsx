@@ -34,6 +34,7 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/in/dimitri-da-silva/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Open LinkedIn page"
           >
             <LinkedinIcon />
           </A>
@@ -43,6 +44,7 @@ const Footer: React.FC = () => {
             href="https://twitter.com/dimitri_d_s"
             target="_blank"
             rel="noreferrer"
+            aria-label="Open Twitter page"
           >
             <TwitterIcon />
           </A>
@@ -52,6 +54,7 @@ const Footer: React.FC = () => {
             href="https://github.com/DimitriDaSilva"
             target="_blank"
             rel="noreferrer"
+            aria-label="Open Github page"
           >
             <GithubIcon />
           </A>
@@ -61,6 +64,7 @@ const Footer: React.FC = () => {
             data-tip=""
             onClick={copyEmail}
             onMouseOut={onMouseOutHandler}
+            aria-label="Copy email button"
           >
             <EmailIcon />
           </EmailButton>
