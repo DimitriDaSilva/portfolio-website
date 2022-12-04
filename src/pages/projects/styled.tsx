@@ -1,7 +1,7 @@
 import { down, up } from "styled-breakpoints";
 import styled, { css, keyframes } from "styled-components";
 
-export const OutterWrapper = styled.div`
+export const OutterWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +182,7 @@ export const Illustration = styled.img`
   }
 `;
 
-export const ProjectsSection = styled.div`
+export const ProjectsSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;

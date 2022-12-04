@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,7 +173,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const ContactSection = styled.div`
+export const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

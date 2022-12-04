@@ -39,7 +39,7 @@ const ContactForm: React.FunctionComponent = () => {
   };
 
   return (
-    <Wrapper id={"contact-form"}>
+    <Wrapper id="contact-form">
       <SectionTitle>Let's chat</SectionTitle>
       <Text>
         Reach out if you want help bringing your ideas to life or if you just

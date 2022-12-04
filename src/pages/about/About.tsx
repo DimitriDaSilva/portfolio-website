@@ -49,7 +49,7 @@ const About: React.FC = () => {
   );
 
   return (
-    <>
+    <main>
       <Img
         src={process.env.PUBLIC_URL + "/assets/portrait.jpg"}
         alt="portrait"
@@ -210,7 +210,7 @@ const About: React.FC = () => {
           <CtaButton text="Let's chat" variant="primary" type="button" />
         </Link>
       </ContactSection>
-    </>
+    </main>
   );
 };
 

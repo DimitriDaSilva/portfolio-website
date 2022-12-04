@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
