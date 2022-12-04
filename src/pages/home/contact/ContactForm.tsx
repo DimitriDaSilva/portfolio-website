@@ -47,26 +47,26 @@ const ContactForm: React.FunctionComponent = () => {
       </Text>
       <Form ref={formRef} onSubmit={sendEmail}>
         <InputSection>
-          <Input type="text" name="name" />
-          <Label>
+          <Input type="text" name="name" id="name" />
+          <Label htmlFor="name">
             <Span>Name</Span>
           </Label>
         </InputSection>
         <InputSection>
-          <Input type="email" name="email" />
-          <Label>
+          <Input type="email" name="email" id="email" />
+          <Label htmlFor="email">
             <Span>Email</Span>
           </Label>
         </InputSection>
         <InputSection>
-          <Input type="text" name="subject" />
-          <Label>
+          <Input type="text" name="subject" id="subject" />
+          <Label htmlFor="subject">
             <Span>Subject</Span>
           </Label>
         </InputSection>
         <InputSection>
-          <TextArea name="message" />
-          <Label>
+          <TextArea name="message" id="message" />
+          <Label htmlFor="message">
             <Span>Message</Span>
           </Label>
         </InputSection>
