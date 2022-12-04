@@ -111,7 +111,7 @@ const ProjectModal: React.FC<IProps> = ({
                     <a href={data.websiteLink} target="_blank" rel="noreferrer">
                       <CtaButton
                         text="View website"
-                        id="secondary"
+                        variant="secondary"
                         type="button"
                       />
                     </a>
@@ -120,7 +120,7 @@ const ProjectModal: React.FC<IProps> = ({
                     <a href={data.githubLink} target="_blank" rel="noreferrer">
                       <CtaButton
                         text="View GitHub"
-                        id="secondary"
+                        variant="secondary"
                         type="button"
                       />
                     </a>

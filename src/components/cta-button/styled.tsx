@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
+import { ButtonVariant } from "./CtaButton";
 
-export const Button = styled.input`
+export const Button = styled.input<{ $variant: ButtonVariant }>`
   font-family: ${({ theme }) => theme.font.families.paragraph};
   font-weight: bold;
   color: white;
@@ -14,17 +15,8 @@ export const Button = styled.input`
     font-size: ${({ theme }) => theme.font.sizes.paragraph_m};
   }
 
-  ${(props) =>
-    props.id === "primary" &&
-    css`
-      background: ${({ theme }) => theme.colors.accent};
-    `};
-
-  ${(props) =>
-    props.id !== "primary" &&
-    css`
-      background: ${({ theme }) => theme.colors.lightGray};
-    `};
+  background: ${({ theme, $variant }) =>
+    $variant === "primary" ? theme.colors.accent : theme.colors.lightGray};
 
   border-radius: 2px;
   padding: 10px;

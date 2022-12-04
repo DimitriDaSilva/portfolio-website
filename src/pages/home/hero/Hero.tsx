@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           <CtaButton
             text="Let's chat!"
             onClick={scrollToContact}
-            id="primary"
+            variant="primary"
             type="button"
           />
         </LeftSide>
