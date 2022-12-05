@@ -1,1 +1,1 @@
-This is my own personal website built with [Next.js](https://nextjs.org/).
+This is my own personal website built with React.
