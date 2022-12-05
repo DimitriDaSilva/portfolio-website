@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,16 +16,17 @@
     "noEmit": true,
     "jsx": "preserve",
     "downlevelIteration": true,
-    "types": [
-      "node",
-      "webpack-env"
+    "types": ["node", "webpack-env"],
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ],
-    "incremental": true
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
