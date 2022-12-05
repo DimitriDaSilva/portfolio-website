@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { up, down } from "styled-breakpoints";
-import { Header } from "../home/hero/styled";
 
 const Error: React.FunctionComponent = () => {
   return (
@@ -48,6 +47,27 @@ export const Wrapper = styled.div`
   ${up("desktopLarge")} {
     padding: 40px 72px;
     width: ${({ theme }) => theme.breakpoints.desktopLarge}px;
+  }
+`;
+
+export const Header = styled.h1`
+  margin: 0px;
+
+  font-weight: bold;
+  line-height: 1.2;
+
+  z-index: 2;
+
+  ${down("mobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.heading_m};
+  }
+
+  ${up("mobile")} {
+    font-size: ${({ theme }) => theme.font.sizes.heading_l};
+  }
+
+  ${up("tablet")} {
+    font-size: ${({ theme }) => theme.font.sizes.heading_xl};
   }
 `;
 
