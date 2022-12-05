@@ -3,7 +3,7 @@ import { Nav, NavLogo, Img, NavMenu, NavLink } from "./styled";
 const Navbar: React.FC = () => {
   return (
     <Nav>
-      <NavLogo to="/">
+      <NavLogo href="/">
         <Img
           src={process.env.PUBLIC_URL + "/assets/dds-logo-black.png"}
           alt="logo"
@@ -11,10 +11,10 @@ const Navbar: React.FC = () => {
       </NavLogo>
       <NavMenu>
         <li>
-          <NavLink to="/projects">Projects</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink href="/about">About</NavLink>
         </li>
       </NavMenu>
     </Nav>

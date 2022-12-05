@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { up } from 'styled-breakpoints'
-import { NavLink as Link } from 'react-router-dom'
+import styled from "styled-components";
+import { up } from "styled-breakpoints";
+import Link from "next/link";
 
 export const Nav = styled.nav`
   display: flex;
@@ -12,27 +12,27 @@ export const Nav = styled.nav`
   padding: 0px 10px;
   width: 100%;
 
-  ${up('mobile')} {
+  ${up("mobile")} {
     padding: 0px 20px;
   }
 
-  ${up('tablet')} {
+  ${up("tablet")} {
     padding: 0px 40px;
   }
 
-  ${up('desktop')} {
+  ${up("desktop")} {
     padding: 0px 72px;
   }
 
-  ${up('desktopLarge')} {
+  ${up("desktopLarge")} {
     padding: 0px 72px;
     width: ${({ theme }) => theme.breakpoints.desktopLarge}px;
   }
-`
+`;
 
 export const NavLogo = styled(Link)`
   text-decoration: none;
-`
+`;
 
 export const Img = styled.img`
   width: 50px;
@@ -40,12 +40,12 @@ export const Img = styled.img`
 
   display: flex;
   align-items: center;
-`
+`;
 
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
-`
+`;
 export const NavLink = styled(Link)`
   font-size: 20px;
   padding: 0px 10px;
@@ -55,7 +55,8 @@ export const NavLink = styled(Link)`
   color: ${({ theme }) => theme.colors.font};
   transition: color ${({ theme }) => theme.transitionSpeed};
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: ${({ theme }) => theme.colors.accent};
   }
-`
+`;
