@@ -1,3 +1,16 @@
+const colors = {
+  bg: "#FFF",
+  accent: "#EF233C",
+  lighterAccent: "#ED7C8A",
+  font: "#2B2D42",
+  buttonFont: "#FFF",
+  darkGray: "#505968",
+  lightGray: "#8D99AE",
+  lightBlue: "#25C3EF",
+  lightGreen: "#25EF94",
+  lightOrange: "#FFC176",
+};
+
 const font = {
   families: {
     heading: "Sen, sans-serif",
@@ -24,25 +37,12 @@ const breakpoints = {
 };
 
 export const themes = {
-  light: {
-    colors: {
-      bg: "#FFF",
-      accent: "#EF233C",
-      lighterAccent: "#ED7C8A",
-      font: "#2B2D42",
-      buttonFont: "#FFF",
-      darkGray: "#505968",
-      lightGray: "#8D99AE",
-      lightBlue: "#25C3EF",
-      lightGreen: "#25EF94",
-      lightOrange: "#FFC176",
-    },
-    breakpoints,
-    font,
-    transitionSpeed: "0.1s",
-    footerHeight: "72px",
-    navbarHeight: "88px",
-  },
+  colors,
+  breakpoints,
+  font,
+  transitionSpeed: "0.1s",
+  footerHeight: "72px",
+  navbarHeight: "88px",
 };
 
-export type ThemeType = typeof themes.light;
+export type ThemeType = typeof themes;

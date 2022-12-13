@@ -14,7 +14,7 @@ import { themes } from "./styles/themes";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={themes.light}>
+    <ThemeProvider theme={themes}>
       <GlobalStyle />
       <Router>
         <Navbar />
