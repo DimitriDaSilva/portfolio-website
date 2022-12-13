@@ -10,7 +10,7 @@ import {
   Illustration,
   ProjectsSection,
 } from "./styled";
-import projects from "../../projects";
+import projects from "../../shared/projects";
 import { useState } from "react";
 
 const techCategoriesDuplicates = projects
