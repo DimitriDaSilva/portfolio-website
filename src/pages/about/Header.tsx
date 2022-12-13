@@ -1,7 +1,7 @@
 import { down, up } from "styled-breakpoints";
 import styled from "styled-components";
 
-import CtaButton from "components/cta-button/CtaButton";
+import Button from "components/button/Button";
 
 const Header: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         rel="noreferrer"
         style={{ flexShrink: 0 }}
       >
-        <CtaButton text="Download my CV" variant="secondary" type="button" />
+        <Button text="Download my CV" variant="secondary" type="button" />
       </a>
     </Container>
   );

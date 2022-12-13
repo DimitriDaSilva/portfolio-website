@@ -12,7 +12,7 @@ import {
   TextArea,
 } from "./styled";
 import SectionTitle from "../../../components/section-title/SectionTitle";
-import CtaButton from "../../../components/cta-button/CtaButton";
+import Button from "../../../components/button/Button";
 
 const ContactForm: React.FunctionComponent = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -72,7 +72,7 @@ const ContactForm: React.FunctionComponent = () => {
             <Span>Message</Span>
           </Label>
         </InputSection>
-        <CtaButton text="Send message" variant="primary" type="submit" />
+        <Button text="Send message" variant="primary" type="submit" />
       </Form>
     </Wrapper>
   );

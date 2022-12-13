@@ -9,7 +9,7 @@ import {
   Illustration,
   FloatingArrow,
 } from "./styled";
-import CtaButton from "../../../components/cta-button/CtaButton";
+import Button from "components/button/Button";
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             </Header>
             <Name>Dimitri Da Silva, front-end web developer from Paris</Name>
           </TextSection>
-          <CtaButton
+          <Button
             text="Let's chat!"
             onClick={scrollToContact}
             variant="primary"

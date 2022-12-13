@@ -19,7 +19,7 @@ import {
   CrossIcon,
 } from "./styled";
 import { IProjectData } from "../project/SingleProject";
-import CtaButton from "../cta-button/CtaButton";
+import Button from "../button/Button";
 
 interface IProps {
   isModalOpen: boolean;
@@ -109,7 +109,7 @@ const ProjectModal: React.FC<IProps> = ({
                 <Links>
                   {data.websiteLink !== "" && (
                     <a href={data.websiteLink} target="_blank" rel="noreferrer">
-                      <CtaButton
+                      <Button
                         text="View website"
                         variant="secondary"
                         type="button"
@@ -118,7 +118,7 @@ const ProjectModal: React.FC<IProps> = ({
                   )}
                   {data.githubLink !== "" && (
                     <a href={data.githubLink} target="_blank" rel="noreferrer">
-                      <CtaButton
+                      <Button
                         text="View GitHub"
                         variant="secondary"
                         type="button"
