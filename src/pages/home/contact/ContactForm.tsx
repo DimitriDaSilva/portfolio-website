@@ -20,11 +20,13 @@ const ContactForm: React.FunctionComponent = () => {
   const sendEmail = (e: React.SyntheticEvent): void => {
     e.preventDefault();
 
+    if (!formRef.current) return;
+
     emailjs
       .sendForm(
         `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`,
         `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`,
-        formRef.current!,
+        formRef.current,
         `${process.env.REACT_APP_EMAILJS_USER_ID}`
       )
       .then(
@@ -35,7 +37,7 @@ const ContactForm: React.FunctionComponent = () => {
           console.log(error.text);
         }
       );
-    formRef.current!.reset();
+    formRef.current.reset();
   };
 
   return (
