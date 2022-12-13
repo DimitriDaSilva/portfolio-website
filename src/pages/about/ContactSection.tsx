@@ -1,4 +1,4 @@
-import CtaButton from "components/cta-button/CtaButton";
+import Button from "components/button/Button";
 import { Link } from "react-router-dom";
 import { down, up } from "styled-breakpoints";
 import styled from "styled-components";
@@ -8,7 +8,7 @@ const ContactSection: React.FC = () => {
     <Container>
       <CallToAction>Get in touch and tell me about yourself!</CallToAction>
       <Link to="/contact">
-        <CtaButton text="Let's chat" variant="primary" type="button" />
+        <Button text="Let's chat" variant="primary" type="button" />
       </Link>
     </Container>
   );

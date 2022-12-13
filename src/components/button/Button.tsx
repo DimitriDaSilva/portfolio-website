@@ -1,8 +1,29 @@
-import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
-import { ButtonVariant } from "./CtaButton";
+import styled from "styled-components";
 
-export const Button = styled.input<{ $variant: ButtonVariant }>`
+export type ButtonVariant = "primary" | "secondary";
+
+interface ButtonProps {
+  text: string;
+  onClick?: () => void;
+  variant: ButtonVariant;
+  type: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ text, onClick, variant, type }) => {
+  return (
+    <ButtonInput
+      value={text}
+      onClick={onClick}
+      $variant={variant}
+      type={type}
+    />
+  );
+};
+
+export default Button;
+
+const ButtonInput = styled.input<{ $variant: ButtonVariant }>`
   font-family: ${({ theme }) => theme.font.families.paragraph};
   font-weight: bold;
   color: white;

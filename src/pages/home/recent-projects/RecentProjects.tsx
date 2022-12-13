@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import CtaButton from "../../../components/cta-button/CtaButton";
+import Button from "../../../components/button/Button";
 import { Wrapper, Projects } from "./styled";
 import SingleProject from "../../../components/project/SingleProject";
 import projects from "../../../shared/projects";
@@ -18,7 +18,7 @@ const RecentProjects: React.FC = () => {
           })}
       </Projects>
       <Link to="/projects">
-        <CtaButton text="See more projects" variant="secondary" type="button" />
+        <Button text="See more projects" variant="secondary" type="button" />
       </Link>
     </Wrapper>
   );
