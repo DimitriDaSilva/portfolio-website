@@ -3,16 +3,18 @@ import styled from "styled-components";
 
 import CtaButton from "components/cta-button/CtaButton";
 
-const AboutHeader: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <Header>
+    <Container>
       <Text>
         <Title>Hey, I’m Dimitri!</Title>
+
         <GrayText>
           I am a driven, resourceful and ever learning programmer that loves a
           good challenge
         </GrayText>
       </Text>
+
       <a
         href={process.env.PUBLIC_URL + "/assets/Dimitri Da Silva - Resume.pdf"}
         target="_blank"
@@ -21,13 +23,13 @@ const AboutHeader: React.FC = () => {
       >
         <CtaButton text="Download my CV" variant="secondary" type="button" />
       </a>
-    </Header>
+    </Container>
   );
 };
 
-export default AboutHeader;
+export default Header;
 
-const Header = styled.div`
+const Container = styled.div`
   display: flex;
 
   ${down("tablet")} {

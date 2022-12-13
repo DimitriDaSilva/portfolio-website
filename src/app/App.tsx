@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import Navbar from "components/navbar/Navbar";
 import Home from "pages/home/Home";
 import Projects from "pages/projects/Projects";
-import About from "pages/about/About";
+import About from "pages/about";
 import Contact from "pages/contact/Contact";
 import Error from "pages/error/Error";
 import Footer from "components/footer/Footer";

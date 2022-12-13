@@ -1,7 +1,7 @@
 import { down, up } from "styled-breakpoints";
 import styled from "styled-components";
 
-import AboutHeader from "./AboutHeader";
+import Header from "./Header";
 import BackgroundSection from "./BackgroundSection";
 import ContactSection from "./ContactSection";
 import GoalsSections from "./GoalsSection";
@@ -17,7 +17,7 @@ const About: React.FC = () => {
       />
 
       <Wrapper>
-        <AboutHeader />
+        <Header />
 
         <Main>
           <BackgroundSection />
