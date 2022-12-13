@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CtaButton from "../../../components/cta-button/CtaButton";
 import { Wrapper, Projects } from "./styled";
 import SingleProject from "../../../components/project/SingleProject";
-import projects from "../../../projects";
+import projects from "../../../shared/projects";
 import SectionTitle from "../../../components/section-title/SectionTitle";
 
 const RecentProjects: React.FC = () => {

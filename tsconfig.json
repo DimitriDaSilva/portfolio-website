@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,12 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "downlevelIteration": true,
-    "types": [
-      "node",
-      "webpack-env"
-    ]
+    "types": ["node", "webpack-env"],
+    "baseUrl": "src"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
