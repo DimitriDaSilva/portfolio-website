@@ -40,8 +40,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     margin: 0;
     padding: 0;
-
-	/*outline: 1px solid red;*/
   }
 `;
 
