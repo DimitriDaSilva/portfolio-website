@@ -18,7 +18,7 @@ const RecentProjects: React.FC = () => {
           })}
       </Projects>
       <Link to="/projects">
-        <Button text="See more projects" variant="secondary" type="button" />
+        <Button text="See more projects" variant="secondary" />
       </Link>
     </Wrapper>
   );

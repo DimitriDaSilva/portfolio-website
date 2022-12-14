@@ -72,7 +72,7 @@ const ContactForm: React.FunctionComponent = () => {
             <Span>Message</Span>
           </Label>
         </InputSection>
-        <Button text="Send message" variant="primary" type="submit" />
+        <Button text="Send message" type="submit" />
       </Form>
     </Wrapper>
   );
