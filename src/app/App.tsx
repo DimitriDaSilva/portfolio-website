@@ -10,11 +10,11 @@ import Contact from "pages/contact/Contact";
 import Error from "pages/error/Error";
 import Footer from "components/footer/Footer";
 import GlobalStyle from "./styles/global";
-import { themes } from "./styles/themes";
+import { theme } from "./styles/theme";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={themes}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
         <Navbar />
