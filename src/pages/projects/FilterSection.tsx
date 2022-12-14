@@ -41,6 +41,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 <TechButton
                   key={index}
                   value={tech}
+                  type="button"
                   onClick={() => updateTechSelection(tech)}
                   id={isSelected}
                 />
