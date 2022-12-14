@@ -3,7 +3,7 @@ import SectionTitle from "components/section-title/SectionTitle";
 
 const BackgroundSection: React.FC = () => {
   return (
-    <>
+    <div>
       <SectionTitle>Background</SectionTitle>
       <p>
         While still working in corporate finance, I started learning code
@@ -49,7 +49,7 @@ const BackgroundSection: React.FC = () => {
         , I continued learning about both front-end and back-end web
         development.
       </p>
-    </>
+    </div>
   );
 };
 

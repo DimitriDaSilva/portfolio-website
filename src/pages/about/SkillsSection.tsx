@@ -32,7 +32,7 @@ const SkillsSection: React.FC = () => {
   );
 
   return (
-    <>
+    <div>
       <SectionTitle>Skills</SectionTitle>
 
       <p>Technologies I am comfortable with:</p>
@@ -71,7 +71,7 @@ const SkillsSection: React.FC = () => {
           );
         })}
       </SkillLogos>
-    </>
+    </div>
   );
 };
 

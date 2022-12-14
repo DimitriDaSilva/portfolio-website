@@ -4,6 +4,7 @@ const HobbiesSection: React.FC = () => {
   return (
     <div>
       <SectionTitle>Hobbies</SectionTitle>
+
       <p>
         My trusted Kindle never too far, reading is for me a daily ritual to
         unwind. I mostly read fantasy books (last in date: the Faithful and the

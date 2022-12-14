@@ -1,21 +1,12 @@
 import { useState } from "react";
-import {
-  Wrapper as Container,
-  SocialIcons,
-  A,
-  LinkedinIcon,
-  TwitterIcon,
-  GithubIcon,
-  EmailIcon,
-  EmailButton,
-  Tooltip,
-  Copyright,
-} from "./styled";
+import styled from "styled-components";
+import { FaGithub, FaLinkedin, FaTwitter, FaRegEnvelope } from "react-icons/fa";
+import ReactTooltip from "react-tooltip";
 
-const Footer: React.FC = () => {
+const SocialIcons: React.FC = () => {
   const defaultMessage = "Copy email to clipboard";
   const successMessage = "Email copied to clipboard";
-  const [tooltipMessage, setTooltipMessage] = useState(defaultMessage);
+  const [tooltipMessage, setTooltipMessage] = useState<string>(defaultMessage);
 
   const copyEmail = (): void => {
     navigator.clipboard.writeText("dimitri.gomes.da.silva@gmail.com");
@@ -27,8 +18,8 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <Container>
-      <SocialIcons>
+    <>
+      <Container>
         <li>
           <A
             href="https://www.linkedin.com/in/dimitri-da-silva/"
@@ -72,9 +63,7 @@ const Footer: React.FC = () => {
             <EmailIcon />
           </EmailButton>
         </li>
-      </SocialIcons>
-
-      <Copyright>© {new Date().getFullYear()} Dimitri Da Silva</Copyright>
+      </Container>
 
       <Tooltip
         multiline={false}
@@ -83,8 +72,70 @@ const Footer: React.FC = () => {
           return tooltipMessage;
         }}
       />
-    </Container>
+    </>
   );
 };
 
-export default Footer;
+export default SocialIcons;
+
+const Container = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  width: 270px;
+  height: 24px;
+
+  > li {
+    overflow-y: hidden;
+  }
+`;
+
+const A = styled.a`
+  display: flex;
+  align-items: center;
+`;
+
+const formatSocialIcon = (
+  icon:
+    | typeof FaGithub
+    | typeof FaLinkedin
+    | typeof FaTwitter
+    | typeof FaRegEnvelope
+) => {
+  return styled(icon)`
+    background: transparent;
+    font-size: 20px;
+
+    color: ${({ theme }) => theme.colors.bg};
+    transition: color ${({ theme }) => theme.transitionSpeed};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.lightGray};
+      display: flex;
+    }
+  `;
+};
+
+const TwitterIcon = formatSocialIcon(FaTwitter);
+const GithubIcon = formatSocialIcon(FaGithub);
+const LinkedinIcon = formatSocialIcon(FaLinkedin);
+const EmailIcon = formatSocialIcon(FaRegEnvelope);
+
+const EmailButton = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+`;
+
+const Tooltip = styled(ReactTooltip).attrs(({ theme }) => ({
+  backgroundColor: `${theme.colors.lightGray}`,
+}))`
+  overflow: hidden;
+  text-align: center;
+`;
