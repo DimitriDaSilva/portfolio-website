@@ -7,6 +7,7 @@ const ContactSection: React.FC = () => {
   return (
     <Container>
       <CallToAction>Get in touch and tell me about yourself!</CallToAction>
+
       <Link to="/contact">
         <Button text="Let's chat" />
       </Link>

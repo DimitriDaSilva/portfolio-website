@@ -30,6 +30,7 @@ const ContactForm: React.FunctionComponent = () => {
           console.log(error.text);
         }
       );
+
     formRef.current.reset();
   };
 

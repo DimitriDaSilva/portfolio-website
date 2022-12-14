@@ -34,7 +34,7 @@ const Project: React.FC<ProjectProps> = (project) => {
         <Stack>{project.stack.slice(0, 3).join(" / ")}</Stack>
       </Text>
 
-      <ProjectButton text="View more" onClick={openModal} />
+      <ProjectButton value="View more" onClick={openModal} />
 
       <ProjectModal
         isModalOpen={isModalOpen}

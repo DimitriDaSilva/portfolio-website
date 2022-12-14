@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import ReactDOM from "react-dom";
 import { FaAngleLeft, FaAngleRight, FaTimes } from "react-icons/fa";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
@@ -47,78 +46,80 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   const portalDiv = document.getElementById("portal");
 
-  return portalDiv
-    ? ReactDOM.createPortal(
-        <Background
-          ref={modalRef}
-          onClick={(e) => {
-            if (modalRef.current === e.target) {
-              closeModal();
-            }
-          }}
-        >
-          <Modal>
-            {project.images.length !== 0 && (
-              <ImageSection style={{ backgroundColor: `${project.color}` }}>
-                <Image src={project.images[currImg]} alt="project" />
-                {project.images.length > 1 && (
-                  <>
-                    <Slider
-                      onClick={() => updateImg(-1)}
-                      style={{ left: "0px" }}
-                    >
-                      <FaAngleLeft color="white" size="20px" />
-                    </Slider>
-                    <Slider
-                      onClick={() => updateImg(1)}
-                      style={{ right: "0px" }}
-                    >
-                      <FaAngleRight color="white" size="20px" />
-                    </Slider>
-                  </>
+  if (!portalDiv) return null;
+
+  return (
+    <>
+      ReactDOM.createPortal(
+      <Background
+        ref={modalRef}
+        onClick={(e) => {
+          if (modalRef.current === e.target) {
+            closeModal();
+          }
+        }}
+      >
+        <Modal>
+          {project.images.length !== 0 && (
+            <ImageSection style={{ backgroundColor: `${project.color}` }}>
+              <Image src={project.images[currImg]} alt="project" />
+
+              {project.images.length > 1 && (
+                <>
+                  <Slider onClick={() => updateImg(-1)} style={{ left: "0px" }}>
+                    <FaAngleLeft color="white" size="20px" />
+                  </Slider>
+
+                  <Slider onClick={() => updateImg(1)} style={{ right: "0px" }}>
+                    <FaAngleRight color="white" size="20px" />
+                  </Slider>
+                </>
+              )}
+            </ImageSection>
+          )}
+
+          <TextSection>
+            <Text>
+              <Title>{project.title}</Title>
+
+              <Description>{project.description}</Description>
+
+              <Stack>
+                <strong>Stack:</strong> {project.stack.join(" / ")}
+              </Stack>
+
+              <Skills>
+                <strong>What I learned:</strong> {project.skills.join(" / ")}
+              </Skills>
+            </Text>
+
+            <LinkSection>
+              <CrossIcon onClick={() => closeModal()} />
+
+              <Links>
+                {project.websiteLink !== "" && (
+                  <a
+                    href={project.websiteLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button text="View website" variant="secondary" />
+                  </a>
                 )}
-              </ImageSection>
-            )}
-            <TextSection>
-              <Text>
-                <Title>{project.title}</Title>
-                <Description>{project.description}</Description>
-                <Stack>
-                  <strong>Stack:</strong> {project.stack.join(" / ")}
-                </Stack>
-                <Skills>
-                  <strong>What I learned:</strong> {project.skills.join(" / ")}
-                </Skills>
-              </Text>
-              <LinkSection>
-                <CrossIcon onClick={() => closeModal()} />
-                <Links>
-                  {project.websiteLink !== "" && (
-                    <a
-                      href={project.websiteLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Button text="View website" variant="secondary" />
-                    </a>
-                  )}
-                  {project.githubLink !== "" && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Button text="View GitHub" variant="secondary" />
-                    </a>
-                  )}
-                </Links>
-              </LinkSection>
-            </TextSection>
-          </Modal>
-        </Background>,
-        portalDiv
-      )
-    : null;
+
+                {project.githubLink !== "" && (
+                  <a href={project.githubLink} target="_blank" rel="noreferrer">
+                    <Button text="View GitHub" variant="secondary" />
+                  </a>
+                )}
+              </Links>
+            </LinkSection>
+          </TextSection>
+        </Modal>
+      </Background>
+      , portalDiv);
+    </>
+  );
 };
 
 export default ProjectModal;
