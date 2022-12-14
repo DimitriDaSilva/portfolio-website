@@ -9,7 +9,7 @@ const Error: React.FunctionComponent = () => {
         alt="developer-illustration"
       />
 
-      <Header> 404 - Page not found</Header>
+      <Header>404 - Page not found</Header>
     </Wrapper>
   );
 };

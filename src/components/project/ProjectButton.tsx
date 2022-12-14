@@ -1,18 +1,9 @@
 import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
 
-interface ProjectButtonProps {
-  text: string;
-  onClick: () => void;
-}
-
-const ProjectButton: React.FC<ProjectButtonProps> = ({ text, onClick }) => {
-  return <Button value={text} onClick={onClick} type="button" />;
-};
-
-export default ProjectButton;
-
-const Button = styled.input`
+const ProjectButton = styled.input.attrs(() => ({
+  type: "button",
+}))`
   font-family: ${({ theme }) => theme.font.families.paragraph};
   font-weight: bold;
   color: white;
@@ -48,3 +39,5 @@ const Button = styled.input`
     background-size: 100% 100%;
   }
 `;
+
+export default ProjectButton;

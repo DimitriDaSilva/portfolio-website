@@ -16,10 +16,10 @@ const FilterSection: React.FC<FilterSectionProps> = ({
   const updateTechSelection = (tech: string): void => {
     // Add tech to selection
     if (!techSelection.includes(tech)) {
-      setTechSelection([tech, ...techSelection]);
+      setTechSelection((prev) => [tech, ...prev]);
       // Remove tech from selection
     } else {
-      setTechSelection(techSelection.filter((t) => t !== tech));
+      setTechSelection((prev) => prev.filter((t) => t !== tech));
     }
   };
 
@@ -37,6 +37,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
             )
             .map((tech, index) => {
               const isSelected = techSelection.includes(tech) ? "selected" : "";
+
               return (
                 <TechButton
                   key={index}

@@ -19,6 +19,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ techSelection }) => {
         return true;
       }
     }
+
     return false;
   };
 

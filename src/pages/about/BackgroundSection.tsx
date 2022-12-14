@@ -5,6 +5,7 @@ const BackgroundSection: React.FC = () => {
   return (
     <div>
       <SectionTitle>Background</SectionTitle>
+
       <p>
         While still working in corporate finance, I started learning code
         through Harvard’s online course{" "}

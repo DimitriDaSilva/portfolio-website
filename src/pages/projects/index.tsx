@@ -14,6 +14,7 @@ const Projects: React.FC = () => {
         techSelection={techSelection}
         setTechSelection={setTechSelection}
       />
+
       <ProjectsSection techSelection={techSelection} />
     </Container>
   );
