@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { up, down } from "styled-breakpoints";
 
-import Hero from "./hero/Hero";
-import RecentProjects from "./recent-projects/RecentProjects";
 import ContactForm from "components/contact-form";
+import Hero from "./Hero";
+import RecentProjects from "./RecentProjects";
 
 const Home: React.FC = () => (
   <Main>

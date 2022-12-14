@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
-import Home from "pages/home/Home";
-import Projects from "pages/projects/Projects";
+import Home from "pages/home";
+import Projects from "pages/projects";
 import About from "pages/about";
 import Contact from "pages/contact/Contact";
 import Error from "pages/error/Error";

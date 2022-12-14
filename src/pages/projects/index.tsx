@@ -1,7 +1,119 @@
+import { useState } from "react";
 import { down, up } from "styled-breakpoints";
 import styled, { css, keyframes } from "styled-components";
 
-export const OutterWrapper = styled.main`
+import Project from "components/project";
+import projects from "shared/projects";
+
+const techCategoriesDuplicates = projects
+  .map((project) => {
+    return project.stack;
+  })
+  .flat(1);
+
+const techCategories = [...new Set<string>(techCategoriesDuplicates)];
+
+interface ISingleTech {
+  key: number;
+  value: string;
+  onClick: () => void;
+  id: string;
+}
+
+const SingleTech: React.FC<ISingleTech> = ({ value, onClick, id }) => {
+  return (
+    <TechButton
+      type="button"
+      value={value}
+      onClick={onClick}
+      id={id}
+    ></TechButton>
+  );
+};
+
+const Projects: React.FC = () => {
+  const [techSelection, setTechSelection] = useState<string[]>([]);
+
+  const updateTechSelection = (tech: string): void => {
+    // Add tech to selection
+    if (!techSelection.includes(tech)) {
+      setTechSelection([tech, ...techSelection]);
+      // Remove tech from selection
+    } else {
+      setTechSelection(techSelection.filter((t) => t !== tech));
+    }
+  };
+
+  const clearTechSelection = () => {
+    setTechSelection([]);
+  };
+
+  const hasActiveCategory = (categories: string[]): boolean => {
+    // If no selection then all projects are shown
+    if (techSelection.length === 0) {
+      return true;
+    }
+
+    for (let category of categories) {
+      if (techSelection.includes(category)) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  return (
+    <OutterWrapper>
+      <FilterSection>
+        <Techs>
+          <Tags>
+            {techCategories
+              .sort(
+                (a, b) =>
+                  +techSelection.includes(b) - +techSelection.includes(a)
+              )
+              .map((tech, index) => {
+                const isSelected = techSelection.includes(tech)
+                  ? "selected"
+                  : "";
+                return (
+                  <SingleTech
+                    key={index}
+                    value={tech}
+                    onClick={() => updateTechSelection(tech)}
+                    id={isSelected}
+                  />
+                );
+              })}
+          </Tags>
+
+          <BinButton onClick={clearTechSelection}>
+            <Bin src={process.env.PUBLIC_URL + "/assets/bin.svg"} alt="bin" />
+          </BinButton>
+        </Techs>
+
+        <Illustration
+          src={
+            process.env.PUBLIC_URL + "/assets/undraw-illustration-projects.svg"
+          }
+          alt="developer-illustration"
+        />
+      </FilterSection>
+
+      <ProjectsSection>
+        {projects
+          .filter((project) => hasActiveCategory(project.stack))
+          .map((project, index) => {
+            return <Project key={index} {...project} />;
+          })}
+      </ProjectsSection>
+    </OutterWrapper>
+  );
+};
+
+export default Projects;
+
+const OutterWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +147,7 @@ export const OutterWrapper = styled.main`
   }
 `;
 
-export const FilterSection = styled.section`
+const FilterSection = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,7 +178,7 @@ export const FilterSection = styled.section`
   }
 `;
 
-export const Techs = styled.div`
+const Techs = styled.div`
   display: flex;
   column-gap: 20px;
   row-gap: 10px;
@@ -88,7 +200,7 @@ export const Techs = styled.div`
   }
 `;
 
-export const Tags = styled.div`
+const Tags = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -98,7 +210,7 @@ export const Tags = styled.div`
   row-gap: 5px;
 `;
 
-export const TechButton = styled.input`
+const TechButton = styled.input`
   padding: 10px;
   border: none;
   border-radius: 100px;
@@ -144,7 +256,7 @@ const shake = keyframes`
   }
 `;
 
-export const BinButton = styled.button`
+const BinButton = styled.button`
   cursor: pointer;
 
   background: none;
@@ -159,7 +271,7 @@ export const BinButton = styled.button`
   flex-shrink: 0;
 `;
 
-export const Bin = styled.img`
+const Bin = styled.img`
   height: 25px;
 
   display: flex;
@@ -167,7 +279,7 @@ export const Bin = styled.img`
   align-items: center;
 `;
 
-export const Illustration = styled.img`
+const Illustration = styled.img`
   height: 60px;
   align-self: flex-end;
 
@@ -182,7 +294,7 @@ export const Illustration = styled.img`
   }
 `;
 
-export const ProjectsSection = styled.section`
+const ProjectsSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
