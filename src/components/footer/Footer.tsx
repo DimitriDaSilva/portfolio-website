@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  Wrapper,
+  Wrapper as Container,
   SocialIcons,
   A,
   LinkedinIcon,
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <Wrapper>
+    <Container>
       <SocialIcons>
         <li>
           <A
@@ -39,6 +39,7 @@ const Footer: React.FC = () => {
             <LinkedinIcon />
           </A>
         </li>
+
         <li>
           <A
             href="https://twitter.com/dimitri_d_s"
@@ -49,6 +50,7 @@ const Footer: React.FC = () => {
             <TwitterIcon />
           </A>
         </li>
+
         <li>
           <A
             href="https://github.com/DimitriDaSilva"
@@ -59,6 +61,7 @@ const Footer: React.FC = () => {
             <GithubIcon />
           </A>
         </li>
+
         <li>
           <EmailButton
             data-tip=""
@@ -70,7 +73,9 @@ const Footer: React.FC = () => {
           </EmailButton>
         </li>
       </SocialIcons>
+
       <Copyright>© {new Date().getFullYear()} Dimitri Da Silva</Copyright>
+
       <Tooltip
         multiline={false}
         scrollHide={true}
@@ -78,7 +83,7 @@ const Footer: React.FC = () => {
           return tooltipMessage;
         }}
       />
-    </Wrapper>
+    </Container>
   );
 };
 

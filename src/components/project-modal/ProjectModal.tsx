@@ -109,20 +109,12 @@ const ProjectModal: React.FC<IProps> = ({
                 <Links>
                   {data.websiteLink !== "" && (
                     <a href={data.websiteLink} target="_blank" rel="noreferrer">
-                      <Button
-                        text="View website"
-                        variant="secondary"
-                        type="button"
-                      />
+                      <Button text="View website" variant="secondary" />
                     </a>
                   )}
                   {data.githubLink !== "" && (
                     <a href={data.githubLink} target="_blank" rel="noreferrer">
-                      <Button
-                        text="View GitHub"
-                        variant="secondary"
-                        type="button"
-                      />
+                      <Button text="View GitHub" variant="secondary" />
                     </a>
                   )}
                 </Links>

@@ -2,15 +2,21 @@ import { down, up } from "styled-breakpoints";
 import styled from "styled-components";
 
 export type ButtonVariant = "primary" | "secondary";
+type ButtonType = "button" | "submit";
 
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  variant: ButtonVariant;
-  type: string;
+  variant?: ButtonVariant;
+  type?: ButtonType;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, variant, type }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  variant = "primary",
+  type = "button",
+}) => {
   return (
     <ButtonInput
       value={text}

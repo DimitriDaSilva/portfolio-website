@@ -28,12 +28,7 @@ const Hero: React.FC = () => {
             </Header>
             <Name>Dimitri Da Silva, front-end web developer from Paris</Name>
           </TextSection>
-          <Button
-            text="Let's chat!"
-            onClick={scrollToContact}
-            variant="primary"
-            type="button"
-          />
+          <Button text="Let's chat!" onClick={scrollToContact} />
         </LeftSide>
         <Illustration
           src={process.env.PUBLIC_URL + "/assets/undraw-illustration-hero.svg"}

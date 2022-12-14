@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         rel="noreferrer"
         style={{ flexShrink: 0 }}
       >
-        <Button text="Download my CV" variant="secondary" type="button" />
+        <Button text="Download my CV" variant="secondary" />
       </a>
     </Container>
   );
