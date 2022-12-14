@@ -1,5 +1,6 @@
 import { down, up } from "styled-breakpoints";
 import styled, { css, keyframes } from "styled-components";
+
 import getTechCategories from "./getTechCategories";
 
 interface FilterSectionProps {

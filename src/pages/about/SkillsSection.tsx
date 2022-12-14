@@ -1,6 +1,7 @@
-import SectionTitle from "components/section-title/SectionTitle";
 import ReactTooltip from "react-tooltip";
 import styled from "styled-components";
+
+import SectionTitle from "components/section-title/SectionTitle";
 
 const getSkillName = (path: string): string | undefined => {
   const filename: string | undefined = path.split(/(\\|\/)/g).pop();

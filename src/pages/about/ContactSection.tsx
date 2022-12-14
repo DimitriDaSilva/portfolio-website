@@ -1,7 +1,8 @@
-import Button from "components/button/Button";
 import { Link } from "react-router-dom";
 import { down, up } from "styled-breakpoints";
 import styled from "styled-components";
+
+import Button from "components/button/Button";
 
 const ContactSection: React.FC = () => {
   return (
