@@ -10,7 +10,7 @@ import SkillsSection from "./SkillsSection";
 
 const About: React.FC = () => {
   return (
-    <main>
+    <Main>
       <Img
         src={process.env.PUBLIC_URL + "/assets/portrait.jpg"}
         alt="portrait"
@@ -19,7 +19,7 @@ const About: React.FC = () => {
       <Wrapper>
         <Header />
 
-        <Main>
+        <Sections>
           <BackgroundSection />
 
           <GoalsSections />
@@ -27,15 +27,21 @@ const About: React.FC = () => {
           <SkillsSection />
 
           <HobbiesSection />
-        </Main>
+        </Sections>
       </Wrapper>
 
       <ContactSection />
-    </main>
+    </Main>
   );
 };
 
 export default About;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Wrapper = styled.section`
   display: flex;
@@ -96,7 +102,7 @@ const Img = styled.img`
   }
 `;
 
-const Main = styled.div`
+const Sections = styled.div`
   ${down("tabletLarge")} {
     display: flex;
     flex-direction: column;
