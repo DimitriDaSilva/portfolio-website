@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import SocialIcons from "./SocialIcons";
 
 const Footer: React.FC = () => {

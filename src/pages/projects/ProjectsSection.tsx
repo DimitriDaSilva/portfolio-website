@@ -1,7 +1,8 @@
-import Project from "components/project";
-import projects from "shared/projects";
 import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
+
+import Project from "components/project";
+import projects from "shared/projects";
 
 interface ProjectsSectionProps {
   techSelection: string[];
