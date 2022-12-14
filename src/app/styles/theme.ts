@@ -36,7 +36,7 @@ const breakpoints = {
   desktopLarge: 1920,
 };
 
-export const themes = {
+export const theme = {
   colors,
   breakpoints,
   font,
@@ -45,4 +45,4 @@ export const themes = {
   navbarHeight: "88px",
 };
 
-export type ThemeType = typeof themes;
+export type ThemeType = typeof theme;
