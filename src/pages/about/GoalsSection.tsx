@@ -2,7 +2,7 @@ import SectionTitle from "components/section-title/SectionTitle";
 
 const GoalsSections: React.FC = () => {
   return (
-    <>
+    <div>
       <SectionTitle>Goals</SectionTitle>
 
       <p>
@@ -16,7 +16,7 @@ const GoalsSections: React.FC = () => {
         stack by continuously honing my craft building challenging projects. Do
         more is my motto.
       </p>
-    </>
+    </div>
   );
 };
 

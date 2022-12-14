@@ -1,4 +1,4 @@
-import SingleProject from "../../components/project/SingleProject";
+import Project from "components/project";
 import {
   OutterWrapper,
   FilterSection,
@@ -10,7 +10,7 @@ import {
   Illustration,
   ProjectsSection,
 } from "./styled";
-import projects from "../../shared/projects";
+import projects from "shared/projects";
 import { useState } from "react";
 
 const techCategoriesDuplicates = projects
@@ -94,10 +94,12 @@ const Projects: React.FC = () => {
                 );
               })}
           </Tags>
+
           <BinButton onClick={clearTechSelection}>
             <Bin src={process.env.PUBLIC_URL + "/assets/bin.svg"} alt="bin" />
           </BinButton>
         </Techs>
+
         <Illustration
           src={
             process.env.PUBLIC_URL + "/assets/undraw-illustration-projects.svg"
@@ -105,11 +107,12 @@ const Projects: React.FC = () => {
           alt="developer-illustration"
         />
       </FilterSection>
+
       <ProjectsSection>
         {projects
           .filter((project) => hasActiveCategory(project.stack))
           .map((project, index) => {
-            return <SingleProject key={index} {...project} />;
+            return <Project key={index} {...project} />;
           })}
       </ProjectsSection>
     </OutterWrapper>
