@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-      time: "07300"
+      time: "07:00"
       timezone: "Europe/Paris"
     ignore:
       - dependency-name: "react"
