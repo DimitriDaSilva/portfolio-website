@@ -43,8 +43,8 @@ const SkillsSection: React.FC = () => {
           return (
             <div key={logo}>
               <Logo
-                data-tip={getSkillName(comfortableSkills[logo].module.default)}
-                src={comfortableSkills[logo].module.default}
+                data-tip={getSkillName(comfortableSkills[logo].module)}
+                src={comfortableSkills[logo].module}
                 alt="logo"
                 data-for={index}
               />
@@ -62,8 +62,8 @@ const SkillsSection: React.FC = () => {
             <div key={logo}>
               <Logo
                 key={index}
-                data-tip={getSkillName(experimentedSkills[logo].module.default)}
-                src={experimentedSkills[logo].module.default}
+                data-tip={getSkillName(experimentedSkills[logo].module)}
+                src={experimentedSkills[logo].module}
                 alt="logo"
                 data-for={index}
               />
